@@ -43,12 +43,14 @@
   --color-text: var(--color-dm-text);
   --color-primary-default: var(--color-dm-primary-default);
   --color-primary-hover: var(--color-dm-primary-hover);
+  --color-gradient: var(--color-dm-gradient);
 
   // Dark Mode
   --color-dm-main: black;
   --color-dm-text: white;
   --color-dm-primary-default: #21D4FD;
   --color-dm-primary-hover: #86CDDC;
+  --color-dm-gradient: linear-gradient(#21D4FD,#0ADDE8);
 
   // Light Mode
   --color-lm-main: white;
