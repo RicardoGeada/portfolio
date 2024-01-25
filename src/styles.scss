@@ -1,7 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
 // FONTS
-
 /* anton-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -31,9 +30,36 @@
 
 /* montserrat-regular - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    src: url('./assets/fonts/montserrat-v26-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/montserrat-v26-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+:root {
+  --color-main: var(--color-dm-main);
+  --color-text: var(--color-dm-text);
+  --color-primary-default: var(--color-dm-primary-default);
+  --color-primary-hover: var(--color-dm-primary-hover);
+
+  // Dark Mode
+  --color-dm-main: black;
+  --color-dm-text: white;
+  --color-dm-primary-default: #21D4FD;
+  --color-dm-primary-hover: #86CDDC;
+
+  // Light Mode
+  --color-lm-main: white;
+}
+
+* {
+  // General Styling
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--color-text);
+}
+
+

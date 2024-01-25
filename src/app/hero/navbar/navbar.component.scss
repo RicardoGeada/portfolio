@@ -1,0 +1,25 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background-color: var(--color-main);
+  border-radius: 40px;
+  .social-links,
+  .nav-links {
+    display: flex;
+    gap: 16px;
+    max-height: 30px;
+  }
+  a {
+    font-family: "Oswald";
+    font-weight: 300;
+    text-decoration: none;
+    &:hover {
+        color: var(--color-primary-hover);
+        path {
+            fill: var(--color-primary-hover);
+        } 
+    }
+  }
+}
