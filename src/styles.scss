@@ -70,6 +70,12 @@
 
 body {
   background-color: rgb(25, 29, 31);
+  font-family: 'Montserat', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Anton';
+  font-weight: 400;
 }
 
 button {
@@ -96,5 +102,18 @@ button {
       border-color: var(--color-primary-hover);
       background-color: var(--color-btn-outlined-hover-fill);
     }
+  }
+}
+
+a {
+  // font-family: "Oswald";
+  // font-weight: 300;
+  // font-size: 20px;
+  text-decoration: none;
+  &:hover {
+      color: var(--color-primary-hover);
+      path {
+          fill: var(--color-primary-hover);
+      } 
   }
 }
