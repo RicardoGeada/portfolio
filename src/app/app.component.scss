@@ -1,5 +1,13 @@
 .content {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 64px;
     padding: 16px;
+    .separator {
+        max-width: 1440px;
+        width: 100%;
+        height: 2px;
+        background-color: var(--color-btn-outlined-default-fill);
+    }
 }
