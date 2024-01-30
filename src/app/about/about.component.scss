@@ -13,7 +13,9 @@
     .about-me {
         grid-area: about-me;
         padding: 64px !important;
-        @include dflex($fd: column, $ai: flex-start, $jc: flex-start);
+        h2 {
+            margin-bottom: 8px; 
+        }
     };
     .greeting {
         grid-area: greeting;

@@ -8,7 +8,7 @@ router-outlet {
 
 .content {
     max-width: 1440px;
-    @include dflex($fd: column, $g: 64px);
+    @include dflex($fd: column, $g: 64px, $ai: space-between);
     .separator {  
         width: 100%;
         height: 2px;

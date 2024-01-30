@@ -1,0 +1,12 @@
+<div class="content">
+    <div class="box">
+        <h2>Skills</h2>
+        <p>I have grown my frontend developments skills that have allowed me to create different real projects.</p>
+    </div>
+    <div class="skills box">
+        <div *ngFor="let skill of skills" class="skill">
+            <img src="./../../assets/img/skill-icons/{{ skill.toLowerCase() }}.svg" alt="{{ skill }}-icon">
+            <div class="skill-name">{{ skill }}</div>
+        </div>
+    </div>
+</div>
