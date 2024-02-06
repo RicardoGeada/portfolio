@@ -1,0 +1,17 @@
+<div class="project" [ngClass]="{'active' : active}" (click)="active = !active">
+    <div class="project-image visible">
+        <img src="./../../../assets/img/projects/{{project.image}}" alt="project-{{project.name}}">
+    </div>
+    <div class="project-image invisible">
+        <img src="./../../../assets/img/projects/project-mockup.png" alt="project-mockup">
+    </div>
+    <div class="project-text">
+        <div class="project-name">{{project.name}}</div>
+        <div class="project-languages">{{project.languages}}</div>
+        <div class="project-description">{{project.description}}</div>
+        <div class="project-links">
+            <a href="{{project.link}}" target="_blank" class="btn-filled" (click)="$event.stopPropagation()">Live Test</a>
+            <a href="{{project.github}}" target="_blank" class="btn-outlined" (click)="$event.stopPropagation()">Github</a>
+        </div>
+    </div>
+</div>

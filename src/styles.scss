@@ -37,7 +37,6 @@
   src: url("./assets/fonts/montserrat-v26-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-
 :root {
   --color-main: var(--color-dm-main);
   --color-text: var(--color-dm-text);
@@ -50,11 +49,11 @@
   // Dark Mode
   --color-dm-main: black;
   --color-dm-text: white;
-  --color-dm-primary-default: #21D4FD;
-  --color-dm-primary-hover: #86CDDC;
-  --color-dm-gradient: linear-gradient(#21D4FD,#0ADDE8);
-  --color-dm-btn-outlined-default-fill: #FFFFFF10;
-  --color-dm-btn-outlined-hover-fill: #86CDDC10;
+  --color-dm-primary-default: #21d4fd;
+  --color-dm-primary-hover: #86cddc;
+  --color-dm-gradient: linear-gradient(#21d4fd, #0adde8);
+  --color-dm-btn-outlined-default-fill: #ffffff10;
+  --color-dm-btn-outlined-hover-fill: #86cddc10;
 
   // Light Mode
   --color-lm-main: white;
@@ -70,31 +69,53 @@
 
 body {
   background-color: rgb(25, 29, 31);
-  font-family: 'Montserat', sans-serif;
+  font-family: "Montserat", sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6 {
-  font-family: 'Anton';
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Anton";
   font-weight: 400;
 }
 
-button {
+a {
+  // font-family: "Oswald";
+  // font-weight: 300;
+  // font-size: 20px;
+  text-decoration: none;
+  &:hover {
+    color: var(--color-primary-hover);
+    path {
+      fill: var(--color-primary-hover);
+    }
+  }
+}
+
+.btn {
   cursor: pointer;
   outline: none;
   border: 2px solid transparent;
   background-color: transparent;
   padding: 16px 40px;
   border-radius: 40px;
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-size: 24px;
   font-weight: 300;
-  &.btn-filled {
+  &-filled {
+    @extend .btn;
+    color: var(--color-text);
     background-color: var(--color-primary-default);
     &:hover {
+      color: var(--color-text);
       background-color: var(--color-primary-hover);
     }
-  };
-  &.btn-outlined {
+  }
+  &-outlined {
+    @extend .btn;
     border-color: var(--color-text);
     background-color: var(--color-btn-outlined-default-fill);
     &:hover {
@@ -105,15 +126,4 @@ button {
   }
 }
 
-a {
-  // font-family: "Oswald";
-  // font-weight: 300;
-  // font-size: 20px;
-  text-decoration: none;
-  &:hover {
-      color: var(--color-primary-hover);
-      path {
-          fill: var(--color-primary-hover);
-      } 
-  }
-}
+
