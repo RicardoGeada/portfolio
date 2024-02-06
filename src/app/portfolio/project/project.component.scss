@@ -1,0 +1,96 @@
+@import "./../../../styles/mixin.scss";
+
+.project {
+  background-color: var(--color-main);
+  border-radius: 40px;
+  padding: 64px;
+  overflow: hidden;
+  width: fit-content;
+  position: relative;
+  @include dflex($jc: flex-start);
+  .project-image {
+    position: relative;
+    width: 400px;
+    &.visible {
+      position: absolute;
+      z-index: 1;
+      bottom: 64px;
+      transition: all 125ms linear;
+    }
+    &.invisible {
+      visibility: hidden;
+    }
+    img {
+      width: 100%;
+      position: relative;
+    }
+  }
+  .project-text {
+    display: none;
+    visibility: hidden;
+    
+    .project-name {
+      font-family: "Anton";
+      font-size: 40px;
+      line-height: 40px;
+    }
+    .project-languages {
+      font-family: "Oswald";
+      font-size: 24px;
+      line-height: 24px;
+    }
+    .project-links {
+      display: flex;
+      gap: 8px;
+    }
+  }
+  &.active {
+    animation: box-scale 250ms ease-out forwards;
+    padding: 32px 64px;
+    .project-image {
+      
+      
+      &.visible {
+        width: calc((100% - 128px - 8px)*0.6); // 128px Padding 8px Gap
+        bottom: 0px;
+        left: 64px;
+        img {
+          left: 0;
+        }
+      }
+      &.invisible {
+        width: 60%;
+      }
+    }
+    .project-text {
+      @include dflex($fd: column, $ai: flex-start, $g: 16px);
+      animation: visibility 250ms 250ms ease-in-out forwards;
+      width: 40%;
+    }
+
+    @keyframes box-scale {
+      0% {
+        width: 50%;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+
+    @keyframes visibility {
+      0% {
+        visibility: hidden;
+        opacity: 0%;
+      }
+      50% {
+        visibility: visible;
+        opacity: 0%;
+      }
+      100% {
+        visibility: visible;
+        opacity: 100%;
+      }
+    }
+
+  }
+}
