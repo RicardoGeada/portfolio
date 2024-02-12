@@ -45,6 +45,7 @@
   --color-gradient: var(--color-dm-gradient);
   --color-btn-outlined-default-fill: var(--color-dm-btn-outlined-default-fill);
   --color-btn-outlined-hover-fill: var(--color-dm-btn-outlined-hover-fill);
+  --color-error:  #e03f3fFF;
 
   // Dark Mode
   --color-dm-main: black;
@@ -70,6 +71,8 @@
 body {
   background-color: rgb(25, 29, 31);
   font-family: "Montserat", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
 h1,
@@ -80,12 +83,37 @@ h5,
 h6 {
   font-family: "Anton";
   font-weight: 400;
+  line-height: 1.15;
+  // letter-spacing: -0.022em;
 }
 
+h1 {
+  font-size: 2.986rem; // 48px
+}
+
+h2 {
+  font-size: 2.488rem; // 40px
+}
+
+h3 {
+  font-size: 2.074rem;
+}
+
+h4 {
+  font-size: 1.728rem;
+}
+
+h5 {
+  font-size: 1.44rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
+
+
 a {
-  // font-family: "Oswald";
-  // font-weight: 300;
-  // font-size: 20px;
   text-decoration: none;
   &:hover {
     color: var(--color-primary-hover);
