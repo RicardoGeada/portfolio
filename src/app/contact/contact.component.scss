@@ -1,0 +1,65 @@
+@import '../../styles/mixin.scss';
+
+.box {
+  @include dflex($g: 32px, $ai: flex-start);
+  background-color: var(--color-main);
+  border-radius: 40px;
+  padding: 64px;
+
+  .text {
+    max-width: 500px;
+    @include dflex($g: 16px, $fd: column, $ai: flex-start);
+  }
+  .form {
+    max-width: 500px;
+    width: 100%;
+  }
+}
+
+.form form {
+
+  @include dflex($g: 16px, $fd: column);
+
+  .input-container {
+    width: 100%;
+    .border {
+      padding: 16px 24px;
+      border: 2px solid var(--color-text);
+      border-radius: 20px;
+      &.valid {
+        border-color: var(--color-primary-default);
+      }
+      &.invalid {
+        border-color: var(--color-error);
+      }
+    }
+    input,
+    textarea {
+      background-color: transparent;
+      outline: none;
+      border: none;
+      width: 100%;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 60px black inset !important;
+      -webkit-text-fill-color: var(--color-text);
+    }
+
+    textarea {
+      min-height: 200px;
+      resize: vertical;
+    }
+
+    .notification {
+      color: var(--color-error);
+      padding: 0 24px;
+    }
+  }
+  button {
+    width: fit-content;
+  }
+}

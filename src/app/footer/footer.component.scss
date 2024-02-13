@@ -1,0 +1,24 @@
+@import '../../styles/mixin.scss';
+
+.box {
+    @include dflex($jc: space-between);
+    padding: 16px 32px;
+    background-color: var(--color-dm-main);
+    border-radius: 40px;
+    .social-links {
+        @include dflex($g: 16px);
+    }
+    a {
+        max-height: 30px;
+        font-family: "Oswald";
+        font-weight: 300;
+        font-size: 20px;
+        text-decoration: none;
+        &:hover {
+            color: var(--color-primary-hover);
+            path {
+                fill: var(--color-primary-hover);
+            } 
+        }
+      }
+}
