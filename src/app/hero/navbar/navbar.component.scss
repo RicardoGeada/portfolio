@@ -1,26 +1,40 @@
+@import "../../../styles/mixin.scss";
+
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include dflex($jc: space-between);
   padding: 16px 32px;
   background-color: var(--color-main);
   border-radius: 40px;
   .social-links,
   .nav-links {
-    display: flex;
-    gap: 16px;
-    max-height: 30px;
+    @include dflex($g: 16px);
+    
   }
   a {
+    max-height: 30px;
+    
     font-family: "Oswald";
     font-weight: 300;
     font-size: 20px;
-    text-decoration: none;
+
     &:hover {
         color: var(--color-primary-hover);
         path {
             fill: var(--color-primary-hover);
         } 
+    }
+  }
+  .logo {
+    width: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 8px 16px;
+    .nav-links, 
+    .social-links {
+      display: none;
     }
   }
 }

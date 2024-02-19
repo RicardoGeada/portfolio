@@ -5,3 +5,10 @@
   align-items: $ai;
   gap: $g;
 }
+
+@mixin font($ff: 'Montserat', $fs: 16px, $fw: 400, $lh: normal) {
+  font-family: $ff, sans-serif;
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+}
