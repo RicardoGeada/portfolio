@@ -1,45 +1,76 @@
 @import "../../styles/mixin.scss";
 
-.content {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas:    "about-me about-me greeting"
-                            "about-me about-me profile"
-                            "socials socials profile";
-    column-gap: 16px;
-    row-gap: 16px;
-    font-size: 24px;
+.about-content {
+
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "about-me about-me greeting"
+    "about-me about-me profile"
+    "socials socials profile";
+  column-gap: 16px;
+  row-gap: 16px;
+
+  .about-me {
+    grid-area: about-me;
+    padding: 64px;
+    h2 {
+      margin-bottom: 8px;
+    }
+  }
+
+  .greeting {
+    grid-area: greeting;
+    text-align: center;
+  }
+
+  .social-links {
+    grid-area: socials;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+
+    .link {
+      width: 100%;
+      @include dflex();
+      padding: 16px;
+    }
+  }
+  
+  .profile-photo {
+    grid-area: profile;
+    background-color: var(--color-text);
+    @include dflex($ai: end);
+    padding: 0;
+    overflow: hidden;
+    img {
+      height: 100%;
+    }
+  }
+  
+}
+
+
+// MEDIA QUERIES
+
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-areas:
+      "greeting"
+      "profile"
+      "about-me"
+      "socials";
+    .profile-photo {
+      max-height: 300px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .about-content {
     .about-me {
-        grid-area: about-me;
-        padding: 64px !important;
-        h2 {
-            margin-bottom: 8px; 
-        }
-    };
-    .greeting {
-        grid-area: greeting;
-        text-align: center;
-    } 
-    .social-links {
-        grid-area: socials;
-        display: flex;
-        justify-content: space-between;
-        gap: 16px;
-        .link {
-            width: 100%;
-            @include dflex();
-        }
+      padding: 40px !important;
     }
-    .profile-photo{
-        grid-area: profile;
-        background-color: var(--color-text) !important;
-        width: 500px;
-        height: 500px;
-    }
-    .box {
-        background-color: var(--color-main);
-        padding: 16px 32px;
-        border-radius: 40px;
-    }
+  }
 }

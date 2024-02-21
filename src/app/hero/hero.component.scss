@@ -3,7 +3,7 @@
 .hero-content {
   @include dflex($fd: column, $g: 16px, $jc: flex-start, $ai: normal);
   position: relative;
-  height: max(100vh, calc(100% + 32px));
+  min-height: max(calc(100dvh - 16px), calc(100%));
 }
 
 .hero-headline {
@@ -52,7 +52,9 @@
 
 .cta-container {
   @include dflex($jc: space-between);
-  padding: 0px 32px;
+  padding: 0px 32px 32px;
+  position: relative;
+  z-index: 2;
 
   .scroll-icon {
     @include font($ff: "Oswald", $fs: 20px, $fw: 300);
@@ -127,6 +129,7 @@
   right: 50%;
   transform: translate(-50%, 0);
   width: 100%;
+  pointer-events: none;
   .hero-img {
     width: 100%;
     max-width:  1000px;
@@ -140,16 +143,13 @@
   .hero-headline {
     padding: 32px;
   }
-  // .hero-profile {
-  //   position: relative;
-  // }
 }
 
 @media (max-width: 480px) {
   .hero-headline {
     padding: 32px;
     .subheader {
-      font-size: 12px;
+      font-size: 16px;
     }
   }
   .cta-container {
@@ -158,10 +158,6 @@
     .scroll-icon {
       display: none;
     }
-    // .btn-outlined {
-    //   font-size: 14px;
-    //   padding: 8px 32px;
-    // }
   }
   .hero-profile {
     position: relative;
@@ -170,11 +166,3 @@
     }
   }
 }
-
-// @media (max-aspect-ratio: 1441/900) and (min-aspect-ratio: 1.3) and (orientation: landscape) {
-//   .hero-profile {
-//     .hero-img {
-//       max-width: 50dvw;
-//     }
-//   }
-// }

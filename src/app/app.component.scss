@@ -1,18 +1,30 @@
 @import "../styles/mixin.scss";
 
 router-outlet {
-    display: flex;
-    justify-content: center;
+    display: block;
     padding: 16px;
 }
 
 .content {
+    margin: 0 auto;
     width: 100%;
     max-width: 1440px;
-    @include dflex($fd: column, $g: 64px, $ai: space-between);
+    @include dflex($fd: column, $g: 64px, $ai: normal, $jc:flex-start);
     .separator {  
         width: 100%;
         height: 2px;
         background-color: var(--color-btn-outlined-default-fill);
+    }
+}
+
+app-hero {
+    height: min(100%, 100dvh);
+    min-height: max-content;
+    flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+    .content {
+        gap: 24px;
     }
 }

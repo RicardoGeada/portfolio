@@ -2,37 +2,30 @@
 
 nav {
   @include dflex($jc: space-between);
-  padding: 16px 32px;
+  padding: 16px 64px;
   background-color: var(--color-main);
   border-radius: 40px;
   .social-links,
   .nav-links {
     @include dflex($g: 16px);
-    
   }
   a {
     max-height: 30px;
-    
     font-family: "Oswald";
     font-weight: 300;
     font-size: 20px;
-
-    &:hover {
-        color: var(--color-primary-hover);
-        path {
-            fill: var(--color-primary-hover);
-        } 
-    }
   }
   .logo {
     width: 30px;
   }
 }
 
+// MEDIA QUERIES
+
 @media (max-width: 768px) {
   nav {
-    padding: 8px 16px;
-    .nav-links, 
+    padding: 8px 32px;
+    .nav-links,
     .social-links {
       display: none;
     }
