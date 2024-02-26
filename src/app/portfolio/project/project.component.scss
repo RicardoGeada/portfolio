@@ -4,17 +4,21 @@
   background-color: var(--color-main);
   border-radius: 40px;
   padding: 64px;
+
   overflow: hidden;
   width: fit-content;
   position: relative;
   @include dflex($jc: flex-start);
+
   .project-image {
     position: relative;
     width: 400px;
     &.visible {
       position: absolute;
       z-index: 1;
-      bottom: 64px;
+      left: 50%;
+      bottom: 50%;
+      transform: translate(-50%,50%);
       transition: all 125ms linear;
     }
     &.invisible {
@@ -25,18 +29,28 @@
       position: relative;
     }
   }
+
+  .wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    // grid-template-columns: 0fr;
+    transition: grid-template-rows 0.5s ease-out; 
+                // grid-template-columns 0.5s ease-out;
+  }
+
   .project-text {
     display: none;
     visibility: hidden;
-    
+    overflow: hidden;
+
     .project-name {
       font-family: "Anton";
-      font-size: 40px;
+      font-size: var(--font-size-h2);
       line-height: 40px;
     }
     .project-languages {
       font-family: "Oswald";
-      font-size: 24px;
+      font-size: var(--font-size-h5);
       line-height: 24px;
     }
     .project-links {
@@ -44,28 +58,28 @@
       gap: 8px;
     }
   }
+
   &.active {
-    animation: box-scale 250ms ease-out forwards;
-    padding: 32px 64px;
+    animation: box-scale 500ms ease-out forwards; 
+    padding: 64px;
+
     .project-image {
-      
-      
       &.visible {
-        width: calc((100% - 128px - 8px)*0.6); // 128px Padding 8px Gap
-        bottom: 0px;
-        left: 64px;
-        img {
-          left: 0;
-        }
+        animation: image-slide 500ms ease-in-out 500ms forwards;
       }
       &.invisible {
         width: 60%;
       }
     }
-    .project-text {
-      @include dflex($fd: column, $ai: flex-start, $g: 16px);
-      animation: visibility 250ms 250ms ease-in-out forwards;
+    .wrapper {
       width: 40%;
+      grid-template-rows: 1fr;
+      grid-template-columns: 1fr;
+
+      .project-text {
+        @include dflex($fd: column, $ai: flex-start, $g: 16px);
+        animation: visibility 250ms 1000ms ease-in-out forwards;
+      }
     }
 
     @keyframes box-scale {
@@ -92,5 +106,67 @@
       }
     }
 
+    @keyframes image-slide {
+      0% {
+        left: 50%;
+        bottom: 50%;
+        transform: translate(-50%,50%);
+      }
+      100% {
+        transform: translate(0%,0);
+        bottom: 0px;
+        left: 64px;
+        width: calc((100% - 128px - 8px) * 0.6);
+      }
+    }
+  }
+}
+
+// MEDIA QUERIES
+
+@media (max-width: 856px) {
+  .project {
+    flex-direction: column-reverse;
+    &.active {
+      .project-image {
+        &.visible {
+          width: calc((100% - 128px) * 1);
+        }
+        &.invisible {
+          width: 100%;
+        }
+      }
+      .wrapper {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .project {
+    padding: 32px;
+    .project-image {
+      width: 100%;
+      &.visible {
+        width: calc((100% - 64px) * 1);
+        bottom: 32px;
+      }
+    }
+    &.active {
+      padding: 32px;
+      .project-image {
+        &.visible {
+          width: calc((100% - 64px) * 1);
+          left: 32px;
+        }
+        &.invisible {
+          width: 100%;
+        }
+      }
+      .project-text {
+        width: 100%;
+      }
+    }
   }
 }

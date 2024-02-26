@@ -166,7 +166,7 @@ a {
 .box {
   background-color: var(--color-main);
   border-radius: 40px;
-  padding: 16px;
+  padding: 64px;
 }
 
 .separator {
@@ -181,8 +181,17 @@ a {
     --font-size-h2: 24px; //40px
     --font-size-h3: 20px; //32px
     --font-size-h4: 1.728rem; //28px
-    --font-size-h5: 1.44rem; //24px
+    --font-size-h5: 18px; //24px
     --font-size-h6: 1.2rem; //20px
-    --font-size-p: 16px;
+    --font-size-p: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 32px;
+  }
+
+  .box {
+    padding: 32px;
   }
 }

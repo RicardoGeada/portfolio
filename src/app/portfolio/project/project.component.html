@@ -5,13 +5,31 @@
     <div class="project-image invisible">
         <img src="./../../../assets/img/projects/project-mockup.png" alt="project-mockup">
     </div>
-    <div class="project-text">
-        <div class="project-name">{{project.name}}</div>
-        <div class="project-languages">{{project.languages}}</div>
-        <div class="project-description">{{project.description}}</div>
-        <div class="project-links">
-            <a href="{{project.link}}" target="_blank" class="btn-filled" (click)="$event.stopPropagation()">Live Test</a>
-            <a href="{{project.github}}" target="_blank" class="btn-outlined" (click)="$event.stopPropagation()">Github</a>
+    <!-- <div class="wrapper"> -->
+        <!-- <div class="project-text">
+            <div class="project-name">{{project.name}}</div>
+            <div class="project-languages">{{project.languages}}</div>
+            <div class="project-description"><p>{{project.description}}</p></div>
+            <div class="project-links">
+                <a href="{{project.link}}" target="_blank" class="btn-filled" (click)="$event.stopPropagation()">Live Test</a>
+                <a href="{{project.github}}" target="_blank" class="btn-outlined" (click)="$event.stopPropagation()">Github</a>
+            </div>
+        </div> -->
+    <!-- </div> -->
+
+    <!-- https://keithjgrant.com/posts/2023/04/transitioning-to-height-auto/ -->
+
+
+    <div class="wrapper">
+        <div class="project-text">
+            <div class="project-name">{{project.name}}</div>
+            <div class="project-languages">{{project.languages}}</div>
+            <div class="project-description"><p>{{project.description}}</p></div>
+            <div class="project-links">
+                <a href="{{project.link}}" target="_blank" class="btn-filled" (click)="$event.stopPropagation()">Live Test</a>
+                <a href="{{project.github}}" target="_blank" class="btn-outlined" (click)="$event.stopPropagation()">Github</a>
+            </div>
         </div>
     </div>
+    
 </div>
