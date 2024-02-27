@@ -1,29 +1,35 @@
 @import "./../../../styles/mixin.scss";
 
 .project {
+  --padding: 64px;
+
   background-color: var(--color-main);
   border-radius: 40px;
-  padding: 64px;
+  padding: var(--padding);
 
-  overflow: hidden;
-  width: fit-content;
+  // overflow: hidden;
+  width: 100%;
+  max-width: fit-content;
   position: relative;
   @include dflex($jc: flex-start);
 
   .project-image {
     position: relative;
     width: 400px;
+    
     &.visible {
       position: absolute;
       z-index: 1;
       left: 50%;
       bottom: 50%;
       transform: translate(-50%,50%);
-      transition: all 125ms linear;
     }
+
     &.invisible {
       visibility: hidden;
+      aspect-ratio: 1.6;
     }
+
     img {
       width: 100%;
       position: relative;
@@ -33,9 +39,7 @@
   .wrapper {
     display: grid;
     grid-template-rows: 0fr;
-    // grid-template-columns: 0fr;
     transition: grid-template-rows 0.5s ease-out; 
-                // grid-template-columns 0.5s ease-out;
   }
 
   .project-text {
@@ -61,33 +65,35 @@
 
   &.active {
     animation: box-scale 500ms ease-out forwards; 
-    padding: 64px;
 
     .project-image {
       &.visible {
-        animation: image-slide 500ms ease-in-out 500ms forwards;
+        animation: image-slide 500ms ease-in-out 0ms forwards;
       }
       &.invisible {
         width: 60%;
       }
     }
+
     .wrapper {
       width: 40%;
       grid-template-rows: 1fr;
-      grid-template-columns: 1fr;
-
-      .project-text {
-        @include dflex($fd: column, $ai: flex-start, $g: 16px);
-        animation: visibility 250ms 1000ms ease-in-out forwards;
-      }
     }
 
+    .project-text {
+      @include dflex($fd: column, $ai: flex-start, $g: 16px);
+      animation: visibility 250ms 500ms ease-in-out forwards;
+    }
+
+    // KEYFRAMES
     @keyframes box-scale {
       0% {
         width: 50%;
+        min-width: 0%;
       }
       100% {
         width: 100%;
+        min-width: 100%;
       }
     }
 
@@ -127,46 +133,89 @@
 @media (max-width: 856px) {
   .project {
     flex-direction: column-reverse;
+    gap: 24px;
+    .project-image {
+      &.visible {
+        width: calc(100% - 2 * var(--padding));
+      }
+    }
+
     &.active {
+      animation: box-scale-mobile 250ms ease-out forwards; 
       .project-image {
         &.visible {
-          width: calc((100% - 128px) * 1);
+          width: calc((100% - 2 * var(--padding)));
+          animation: image-slide-mobile 500ms ease-in-out 0ms forwards;
         }
         &.invisible {
           width: 100%;
         }
       }
+
       .wrapper {
         width: 100%;
       }
+
+      @keyframes box-scale-mobile {
+        0% {
+          width: 100%;
+          min-width: 100%;
+        }
+        100% {
+          width: 100%;
+          min-width: 100%;
+        }
+      }
+
+      @keyframes image-slide-mobile {
+        0% {
+          left: 50%;
+          bottom: 50%;
+          transform: translate(-50%,50%);
+        }
+        50% {
+          left: 50%;
+          bottom: var(--padding);
+          transform: translate(-50%,0);
+          width: calc(100% - 2 * var(--padding));
+        }
+        100% {
+          transform: translate(0,0);
+          bottom: var(--padding);
+          left: var(--padding);
+          width: calc((100% - 2 * var(--padding)));
+        }
+      }
+      
     }
   }
 }
 
 @media (max-width: 480px) {
   .project {
-    padding: 32px;
-    .project-image {
-      width: 100%;
-      &.visible {
-        width: calc((100% - 64px) * 1);
-        bottom: 32px;
-      }
-    }
-    &.active {
-      padding: 32px;
-      .project-image {
-        &.visible {
-          width: calc((100% - 64px) * 1);
-          left: 32px;
-        }
-        &.invisible {
-          width: 100%;
-        }
-      }
-      .project-text {
-        width: 100%;
-      }
-    }
+    --padding: 32px;
+    // .project-image {
+    //   // width: 100%;
+    //   &.visible {
+    //     width: calc((100% - 2 * var(--padding)));
+    //   }
+    // }
+    // &.active {
+    //   // padding: 32px;
+    //   // .project-image {
+    //   //   &.visible {
+    //   //     width: calc((100% - 2 * var(--padding)));
+    //   //   }
+    //   //   &.invisible {
+    //   //     width: 100%;
+    //   //   }
+    //   // }
+
+    //   .project-text {
+    //     width: 100%;
+    //   }
+
+      
+    // }
   }
 }
