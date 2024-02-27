@@ -1,13 +1,8 @@
 @import "./../../../styles/mixin.scss";
 
 .project {
-  --padding: 64px;
 
-  background-color: var(--color-main);
-  border-radius: 40px;
-  padding: var(--padding);
-
-  // overflow: hidden;
+  overflow: hidden;
   width: 100%;
   max-width: fit-content;
   position: relative;
@@ -130,13 +125,15 @@
 
 // MEDIA QUERIES
 
-@media (max-width: 856px) {
+@media (max-width: 876px) {
   .project {
+
     flex-direction: column-reverse;
     gap: 24px;
+
     .project-image {
       &.visible {
-        width: calc(100% - 2 * var(--padding));
+        width: calc(100% - 2 * var(--padding-box));
       }
     }
 
@@ -144,7 +141,7 @@
       animation: box-scale-mobile 250ms ease-out forwards; 
       .project-image {
         &.visible {
-          width: calc((100% - 2 * var(--padding)));
+          width: calc((100% - 2 * var(--padding-box)));
           animation: image-slide-mobile 500ms ease-in-out 0ms forwards;
         }
         &.invisible {
@@ -156,6 +153,7 @@
         width: 100%;
       }
 
+      // KEYFRAMES
       @keyframes box-scale-mobile {
         0% {
           width: 100%;
@@ -175,15 +173,15 @@
         }
         50% {
           left: 50%;
-          bottom: var(--padding);
+          bottom: var(--padding-box);
           transform: translate(-50%,0);
-          width: calc(100% - 2 * var(--padding));
+          width: calc(100% - 2 * var(--padding-box));
         }
         100% {
           transform: translate(0,0);
-          bottom: var(--padding);
-          left: var(--padding);
-          width: calc((100% - 2 * var(--padding)));
+          bottom: var(--padding-box);
+          left: var(--padding-box);
+          width: calc((100% - 2 * var(--padding-box)));
         }
       }
       
@@ -191,31 +189,3 @@
   }
 }
 
-@media (max-width: 480px) {
-  .project {
-    --padding: 32px;
-    // .project-image {
-    //   // width: 100%;
-    //   &.visible {
-    //     width: calc((100% - 2 * var(--padding)));
-    //   }
-    // }
-    // &.active {
-    //   // padding: 32px;
-    //   // .project-image {
-    //   //   &.visible {
-    //   //     width: calc((100% - 2 * var(--padding)));
-    //   //   }
-    //   //   &.invisible {
-    //   //     width: 100%;
-    //   //   }
-    //   // }
-
-    //   .project-text {
-    //     width: 100%;
-    //   }
-
-      
-    // }
-  }
-}

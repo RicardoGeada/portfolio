@@ -164,9 +164,10 @@ a {
 }
 
 .box {
+  --padding-box: 64px;
   background-color: var(--color-main);
   border-radius: 40px;
-  padding: 64px;
+  padding: var(--padding-box);
 }
 
 .separator {
@@ -192,6 +193,6 @@ a {
   }
 
   .box {
-    padding: 32px;
+    --padding-box: 32px;
   }
 }
