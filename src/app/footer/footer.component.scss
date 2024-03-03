@@ -3,11 +3,11 @@
 .footer-content {
     @include dflex($jc: space-between);
     padding: 16px 64px;
-    background-color: var(--color-dm-main);
-    border-radius: 40px;
+
     .social-links {
         @include dflex($g: 16px);
     }
+    
     a {
         max-height: 30px;
         font-family: "Oswald";
@@ -21,5 +21,11 @@
 @media (max-width: 768px) {
     .footer-content {
         flex-direction: column;
+        padding: 16px 32px;
+
+        a {
+            font-size: 16px;
+        }
     }
+    
   }

@@ -15,14 +15,12 @@
   .about-me {
     grid-area: about-me;
     padding: 64px;
-    h2 {
-      margin-bottom: 8px;
-    }
   }
 
   .greeting {
     grid-area: greeting;
     text-align: center;
+    padding: 16px;
   }
 
   .social-links {

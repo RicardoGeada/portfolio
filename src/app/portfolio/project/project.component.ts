@@ -11,7 +11,9 @@ import { Project } from '../../interfaces/project.interface';
   styleUrl: './project.component.scss'
 })
 export class ProjectComponent {
+  
   active: boolean = false;
+
   @Input() project : Project = {
     name :  'Project Name',
     languages: '01 | 02 | 03',

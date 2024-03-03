@@ -42,6 +42,7 @@
   --color-text: var(--color-dm-text);
   --color-primary-default: var(--color-dm-primary-default);
   --color-primary-hover: var(--color-dm-primary-hover);
+  --color-primary-disabled: var(--color-dm-primary-disabled);
   --color-gradient: var(--color-dm-gradient);
   --color-btn-outlined-default-fill: var(--color-dm-btn-outlined-default-fill);
   --color-btn-outlined-hover-fill: var(--color-dm-btn-outlined-hover-fill);
@@ -59,6 +60,7 @@
   --color-dm-text: white;
   --color-dm-primary-default: #21d4fd;
   --color-dm-primary-hover: #86cddc;
+  --color-dm-primary-disabled: #D6E5E9;
   --color-dm-gradient: linear-gradient(#21d4fd, #0adde8);
   --color-dm-btn-outlined-default-fill: #ffffff10;
   --color-dm-btn-outlined-hover-fill: #86cddc10;
@@ -73,6 +75,7 @@
   margin: 0;
   padding: 0;
   color: var(--color-text);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -80,6 +83,7 @@ body {
   font-family: "Montserat", sans-serif;
   font-weight: 400;
   line-height: 1.6;
+  
 }
 
 h1,
@@ -90,7 +94,7 @@ h5,
 h6 {
   font-family: "Anton";
   font-weight: 400;
-  line-height: 1.15;
+  // line-height: 1.15;
   // letter-spacing: -0.022em;
 }
 
@@ -124,12 +128,21 @@ p {
 
 a {
   text-decoration: none;
-  &:hover {
+  outline: none;
+  &:hover,
+  &:focus {
     color: var(--color-primary-hover);
     path {
       fill: var(--color-primary-hover);
     }
   }
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
 }
 
 .btn {
@@ -150,6 +163,10 @@ a {
       color: var(--color-text);
       background-color: var(--color-primary-hover);
     }
+    &:disabled {
+      color: var(--color-main);
+      background-color: var(--color-primary-disabled);
+    }
   }
   &-outlined {
     @extend .btn;
@@ -158,6 +175,11 @@ a {
     &:hover {
       color: var(--color-primary-hover);
       border-color: var(--color-primary-hover);
+      background-color: var(--color-btn-outlined-hover-fill);
+    }
+    &:disabled {
+      color: var();
+      border-color: var(--color-primary-disabled);
       background-color: var(--color-btn-outlined-hover-fill);
     }
   }

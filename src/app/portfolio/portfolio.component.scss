@@ -2,12 +2,6 @@
 .content {
   @include dflex($fd: column, $g: 16px, $ai: space-between);
 
-  .box {
-    h2 {
-      margin-bottom: 8px;
-    }
-  }
-
   app-project {
     display: flex;
     justify-content: center;

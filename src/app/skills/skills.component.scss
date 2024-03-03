@@ -2,14 +2,7 @@
 
 .skills-content {
   @include dflex($fd: column, $g: 16px, $ai: space-between);
-  .box {
-    background-color: var(--color-main);
-    border-radius: 40px;
-    padding: 64px;
-    h2 {
-      margin-bottom: 8px;
-    }
-  }
+
   .skills {
     width: 100%;
     display: grid;
@@ -35,10 +28,6 @@
 
 @media (max-width: 480px) {
     .skills-content {
-        .box {
-          padding: 32px;
-        }
-
         .skills {
           grid-template-columns: repeat(auto-fit, 48px);
         }
