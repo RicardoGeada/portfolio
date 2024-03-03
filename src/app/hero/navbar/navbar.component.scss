@@ -20,6 +20,45 @@ nav {
   }
 }
 
+/* burger menu */ 
+
+.burger-menu {
+  display: none;
+  width: 18px;
+  height: 18px;
+  aspect-ratio: 1/1;
+  position: relative;
+  .bar {
+    transition: 
+      y 300ms ease-in 300ms,
+      rotate 300ms ease-in,
+      opacity 0ms 300ms;
+    transform-origin: center;
+  }
+
+  &.active {
+    .bar {
+      transition: 
+      y 300ms ease-in,
+      rotate 300ms ease-in 300ms,
+      opacity 0ms 300ms;
+
+      &.top {
+        y: 45;
+        rotate: 45deg;
+      }
+      &.mid {
+        y: 45;
+        opacity: 0%;
+      }
+      &.bottom {
+        y: 45;
+        rotate: -45deg;
+      }
+    }
+  }
+}
+
 // MEDIA QUERIES
 
 @media (max-width: 768px) {
@@ -28,6 +67,9 @@ nav {
     .nav-links,
     .social-links {
       display: none;
+    }
+    .burger-menu {
+      display: block;
     }
   }
 }
