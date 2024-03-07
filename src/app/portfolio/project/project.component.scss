@@ -1,42 +1,55 @@
 @import "./../../../styles/mixin.scss";
 
 .project {
-  background-color: var(--color-main);
-  border-radius: 40px;
-  padding: 64px;
+
   overflow: hidden;
-  width: fit-content;
+  width: 100%;
+  max-width: fit-content;
   position: relative;
   @include dflex($jc: flex-start);
+
   .project-image {
     position: relative;
     width: 400px;
+    
     &.visible {
       position: absolute;
       z-index: 1;
-      bottom: 64px;
-      transition: all 125ms linear;
+      left: 50%;
+      bottom: 50%;
+      transform: translate(-50%,50%);
     }
+
     &.invisible {
       visibility: hidden;
+      aspect-ratio: 1.6;
     }
+
     img {
       width: 100%;
       position: relative;
     }
   }
+
+  .wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out; 
+  }
+
   .project-text {
     display: none;
     visibility: hidden;
-    
+    overflow: hidden;
+
     .project-name {
       font-family: "Anton";
-      font-size: 40px;
+      font-size: var(--font-size-h2);
       line-height: 40px;
     }
     .project-languages {
       font-family: "Oswald";
-      font-size: 24px;
+      font-size: var(--font-size-h5);
       line-height: 24px;
     }
     .project-links {
@@ -44,36 +57,38 @@
       gap: 8px;
     }
   }
+
   &.active {
-    animation: box-scale 250ms ease-out forwards;
-    padding: 32px 64px;
+    animation: box-scale 500ms ease-out forwards; 
+
     .project-image {
-      
-      
       &.visible {
-        width: calc((100% - 128px - 8px)*0.6); // 128px Padding 8px Gap
-        bottom: 0px;
-        left: 64px;
-        img {
-          left: 0;
-        }
+        animation: image-slide 500ms ease-in-out 0ms forwards;
       }
       &.invisible {
         width: 60%;
       }
     }
-    .project-text {
-      @include dflex($fd: column, $ai: flex-start, $g: 16px);
-      animation: visibility 250ms 250ms ease-in-out forwards;
+
+    .wrapper {
       width: 40%;
+      grid-template-rows: 1fr;
     }
 
+    .project-text {
+      @include dflex($fd: column, $ai: flex-start, $g: 16px);
+      animation: visibility 250ms 500ms ease-in-out forwards;
+    }
+
+    // KEYFRAMES
     @keyframes box-scale {
       0% {
         width: 50%;
+        min-width: 0%;
       }
       100% {
         width: 100%;
+        min-width: 100%;
       }
     }
 
@@ -92,5 +107,85 @@
       }
     }
 
+    @keyframes image-slide {
+      0% {
+        left: 50%;
+        bottom: 50%;
+        transform: translate(-50%,50%);
+      }
+      100% {
+        transform: translate(0%,0);
+        bottom: 0px;
+        left: 64px;
+        width: calc((100% - 128px - 8px) * 0.6);
+      }
+    }
   }
 }
+
+// MEDIA QUERIES
+
+@media (max-width: 876px) {
+  .project {
+
+    flex-direction: column-reverse;
+    gap: 24px;
+
+    .project-image {
+      &.visible {
+        width: calc(100% - 2 * var(--padding-box));
+      }
+    }
+
+    &.active {
+      animation: box-scale-mobile 250ms ease-out forwards; 
+      .project-image {
+        &.visible {
+          width: calc((100% - 2 * var(--padding-box)));
+          animation: image-slide-mobile 500ms ease-in-out 0ms forwards;
+        }
+        &.invisible {
+          width: 100%;
+        }
+      }
+
+      .wrapper {
+        width: 100%;
+      }
+
+      // KEYFRAMES
+      @keyframes box-scale-mobile {
+        0% {
+          width: 100%;
+          min-width: 100%;
+        }
+        100% {
+          width: 100%;
+          min-width: 100%;
+        }
+      }
+
+      @keyframes image-slide-mobile {
+        0% {
+          left: 50%;
+          bottom: 50%;
+          transform: translate(-50%,50%);
+        }
+        50% {
+          left: 50%;
+          bottom: var(--padding-box);
+          transform: translate(-50%,0);
+          width: calc(100% - 2 * var(--padding-box));
+        }
+        100% {
+          transform: translate(0,0);
+          bottom: var(--padding-box);
+          left: var(--padding-box);
+          width: calc((100% - 2 * var(--padding-box)));
+        }
+      }
+      
+    }
+  }
+}
+

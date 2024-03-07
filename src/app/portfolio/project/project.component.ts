@@ -11,13 +11,15 @@ import { Project } from '../../interfaces/project.interface';
   styleUrl: './project.component.scss'
 })
 export class ProjectComponent {
+  
   active: boolean = false;
+
   @Input() project : Project = {
-    name :  'Project Name',
-    languages: '01 | 02 | 03',
-    description: 'Lorem ipsum',
+    name :  '',
+    languages: '',
+    description: '',
     link: '',
-    github: 'https://www.github.com',
+    github: '',
     image: '',
   };
 }

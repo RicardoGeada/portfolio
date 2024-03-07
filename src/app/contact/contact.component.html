@@ -1,14 +1,14 @@
 <div class="box">
   <div class="text">
     <h2>Contact</h2>
-    <h4>Got a problem to solve?</h4>
-    <p>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.</p>
+    <h5>Got a problem to solve?</h5>
+    <p>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.</p><br>
     <p>Need a Frontend developer? Contact me!</p>
   </div>
   <div class="form">
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
       <div class="input-container" (click)="setFocus('name')">
-        <div class="border" [ngClass]="{ invalid: !name.valid && name.touched, valid: name.valid && name.touched }">
+        <div class="border" [ngClass]="{ invalid: !name.valid && (name.touched || contactForm.submitted), valid: name.valid && name.touched }">
           <input
             [(ngModel)]="contactData.name"
             type="text"
@@ -19,13 +19,13 @@
             #name="ngModel"
           />
         </div>
-        @if (!name.valid && name.touched) {
+        @if (!name.valid && (name.touched || contactForm.submitted)) {
         <div class="notification">Please enter your name</div>
         }
       </div>
 
       <div class="input-container" (click)="setFocus('email')">
-        <div class="border" [ngClass]="{ invalid: !email.valid && email.touched, valid: email.valid && email.touched}">
+        <div class="border" [ngClass]="{ invalid: !email.valid && (email.touched || contactForm.submitted), valid: email.valid && email.touched}">
           <input
             [(ngModel)]="contactData.email"
             type="email"
@@ -37,13 +37,13 @@
             pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
           />
         </div>
-        @if (!email.valid && email.touched) {
+        @if (!email.valid && (email.touched || contactForm.submitted)) {
         <div class="notification">Please enter your email</div>
         }
       </div>
 
       <div class="input-container" (click)="setFocus('message')">
-        <div class="border" [ngClass]="{ invalid: !message.valid && message.touched, valid: message.valid && message.touched }">
+        <div class="border" [ngClass]="{ invalid: !message.valid && (message.touched || contactForm.submitted), valid: message.valid && message.touched }">
           <textarea
             [(ngModel)]="contactData.message"
             id="message"
@@ -54,12 +54,36 @@
           ></textarea>
         </div>
 
-        @if (!message.valid && message.touched) {
+        @if (!message.valid && (message.touched || contactForm.submitted)) {
         <div class="notification">Please enter a message</div>
         }
       </div>
 
-      <button class="btn-filled" type="submit">Let's work together.</button>
+      <div class="privacy-policy-container">
+        <div class="dflex">
+          
+          <button class="checkbox" type="button" (click)="unchecked = !unchecked">
+            <img src="./../../assets/img/{{unchecked ? 'unchecked' : 'checked'}}.svg" alt="checkbox">
+          </button>
+
+          <div class="pp-text">
+            <span>I've read the </span>
+            <a href="">privacy policy</a>
+            <span> and agree to the processing of my data as outlined.</span>
+            @if (buttonDisabled && unchecked) {
+              <div class="notification">Please accept the privacy policy.</div>
+              }
+          </div>
+          
+        </div>
+        
+      </div>
+      <div class="pp-btn-container">
+        <button class="btn-filled" type="submit" #submitbutton [disabled]="unchecked">Let's work together.</button>
+        <div class="disabled-btn-overlay" (click)="buttonDisabled = true" *ngIf="unchecked"></div>
+      </div>
+        
+      
     </form>
   </div>
 </div>

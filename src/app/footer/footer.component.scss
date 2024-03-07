@@ -1,24 +1,31 @@
 @import '../../styles/mixin.scss';
 
-.box {
+.footer-content {
     @include dflex($jc: space-between);
-    padding: 16px 32px;
-    background-color: var(--color-dm-main);
-    border-radius: 40px;
+    padding: 16px 64px;
+
     .social-links {
         @include dflex($g: 16px);
     }
+    
     a {
         max-height: 30px;
         font-family: "Oswald";
         font-weight: 300;
         font-size: 20px;
-        text-decoration: none;
-        &:hover {
-            color: var(--color-primary-hover);
-            path {
-                fill: var(--color-primary-hover);
-            } 
-        }
-      }
+    }
 }
+
+// MEDIA QUERIES
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        padding: 16px 32px;
+
+        a {
+            font-size: 16px;
+        }
+    }
+    
+  }

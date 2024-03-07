@@ -2,20 +2,11 @@
 .content {
   @include dflex($fd: column, $g: 16px, $ai: space-between);
 
-  .box {
-    width: 100%;
-    background-color: var(--color-main);
-    border-radius: 40px;
-    padding: 64px;
-    font-size: 24px;
-    h2 {
-      margin-bottom: 8px;
-    }
-  }
-
   app-project {
     display: flex;
     justify-content: center;
   }
+
+
 
 }

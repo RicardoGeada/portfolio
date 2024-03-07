@@ -1,28 +1,43 @@
 @import "../../styles/mixin.scss";
 
-.content {
-    @include dflex($fd: column, $g: 16px, $ai : space-between);
-    .box {
-        background-color: var(--color-main);
-        border-radius: 40px;
-        padding: 64px;
-        font-size: 24px;
-        h2 {
-            margin-bottom: 8px;
+.skills-content {
+  @include dflex($fd: column, $g: 16px, $ai: space-between);
+
+  .skills {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 80px);
+    grid-gap: 8px;
+    justify-content: space-between;
+  }
+  .skill {
+    @include dflex($fd: column);
+    width: 80px;
+    text-align: center;
+    &:hover {
+      font-weight: bold;
+      gap: 16px;
+    }
+  }
+}
+
+// MEDIA QUERIES
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
+    .skills-content {
+        .skills {
+          grid-template-columns: repeat(auto-fit, 48px);
         }
-    }
-    .skills {
-        @include dflex($jc: space-between);
-        flex-wrap: wrap;
-    }
-    .skill {
-        @include dflex($fd: column);
-        font-size: 16px;
-        width: 80px;
-        text-align: center;
-        &:hover {
-            font-weight: bold;
-            gap: 16px;
+        .skill {
+          width: 48px;
+            img {
+                width: 48px;
+            }
+
+            font-size: 12px;
         }
     }
 }

@@ -1,14 +1,11 @@
-@import '../../styles/mixin.scss';
+@import "../../styles/mixin.scss";
 
 .box {
   @include dflex($g: 32px, $ai: flex-start);
-  background-color: var(--color-main);
-  border-radius: 40px;
-  padding: 64px;
 
   .text {
     max-width: 500px;
-    @include dflex($g: 16px, $fd: column, $ai: flex-start);
+    // @include dflex($g: 16px, $fd: column, $ai: flex-start);
   }
   .form {
     max-width: 500px;
@@ -17,11 +14,11 @@
 }
 
 .form form {
-
-  @include dflex($g: 16px, $fd: column);
-
+  @include dflex($g: 0px, $fd: column);
   .input-container {
     width: 100%;
+    padding-bottom: 20px;
+    position: relative;
     .border {
       padding: 16px 24px;
       border: 2px solid var(--color-text);
@@ -39,6 +36,9 @@
       outline: none;
       border: none;
       width: 100%;
+      font-family: "Montserat", sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
     }
 
     input:-webkit-autofill,
@@ -57,9 +57,66 @@
     .notification {
       color: var(--color-error);
       padding: 0 24px;
+      font-size: 12px;
+      position: absolute;
+      bottom: 4px;
+      height: 16px;
     }
   }
-  button {
-    width: fit-content;
+
+  .privacy-policy-container {
+    a {
+      color: var(--color-primary-default);
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+    img {
+      vertical-align: middle;
+    }
+    .dflex {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .checkbox {
+      &:hover,
+      &:focus {
+        background-color: var(--color-primary-hover);
+        border-radius: 100%;
+      }
+    }
+
+    .pp-text {
+      padding-bottom: 20px;
+      position: relative;
+    }
+    .notification {
+      color: var(--color-error);
+      font-size: 12px;
+      position: absolute;
+      bottom: 6px;
+      height: 16px;
+    }
+  }
+}
+
+.pp-btn-container {
+  position: relative;
+  .disabled-btn-overlay {
+    position: absolute;
+    top: 0;
+    border-radius: 40px;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 876px) {
+  .box {
+    flex-direction: column;
+    align-items: center;
   }
 }

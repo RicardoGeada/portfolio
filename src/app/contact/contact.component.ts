@@ -12,7 +12,11 @@ import { FormsModule, NgForm } from '@angular/forms';
 })
 export class ContactComponent {
   
+  unchecked : boolean = true;
+  buttonDisabled: boolean = false;
+
   http = inject(HttpClient);
+  
 
   contactData = {
     name: '',

@@ -7,11 +7,12 @@ import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeroComponent, AboutComponent, SkillsComponent, PortfolioComponent, ContactComponent, FooterComponent],
+  imports: [CommonModule, RouterOutlet, HeaderComponent, HeroComponent, AboutComponent, SkillsComponent, PortfolioComponent, ContactComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
