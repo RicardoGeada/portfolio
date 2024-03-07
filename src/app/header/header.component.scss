@@ -1,23 +1,34 @@
-@import "../../../styles/mixin.scss";
+@import "../../styles/mixin.scss";
 
-nav {
+/* navbar */
+
+.navbar {
   @include dflex($jc: space-between);
   padding: 16px 64px;
   background-color: var(--color-main);
   border-radius: 40px;
+
+  position: sticky;
+  top: 16;
+  z-index: 1000;
+
   .social-links,
   .nav-links {
     @include dflex($g: 16px);
   }
+
   a {
     max-height: 30px;
     font-family: "Oswald";
     font-weight: 300;
     font-size: 20px;
   }
+
   .logo {
     width: 30px;
+    aspect-ratio: 1 / 1;
   }
+
 }
 
 /* burger menu */ 
@@ -30,20 +41,20 @@ nav {
   position: relative;
   .bar {
     transition: 
-      y 300ms ease-in 300ms,
-      rotate 300ms ease-in,
-      opacity 0ms 300ms;
+      y 125ms ease-in 125ms,
+      rotate 125ms ease-in,
+      opacity 0ms 125ms;
     transform-origin: center;
   }
 
-  &.active {
+  &.open {
     .bar {
       transition: 
-      y 300ms ease-in,
-      rotate 300ms ease-in 300ms,
-      opacity 0ms 300ms;
+      y 125ms ease-in,
+      rotate 125ms ease-in 125ms,
+      opacity 0ms 125ms;
 
-      &.top {
+      &.top{
         y: 45;
         rotate: 45deg;
       }
@@ -59,10 +70,41 @@ nav {
   }
 }
 
+/* mobile menu */
+
+.overlay-bg {
+  backdrop-filter: blur(8px);
+  min-height: 100vh;
+  height: 100%;
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  right: -16px;
+  z-index: 999;
+  padding: 16px;
+  touch-action: none;
+}
+
+.overlay-menu {
+  z-index: 999;
+  width: 100%;
+  margin-top: 64px;
+  box-shadow: 2px;
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+}
+
+
+
 // MEDIA QUERIES
 
 @media (max-width: 768px) {
-  nav {
+  .navbar {
     padding: 8px 32px;
     .nav-links,
     .social-links {

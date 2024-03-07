@@ -2,10 +2,11 @@
 
 router-outlet {
     display: block;
-    padding: 16px;
+    
 }
 
 .content {
+    padding: 16px;
     margin: 0 auto;
     width: 100%;
     max-width: 1440px;
@@ -17,11 +18,19 @@ router-outlet {
     }
 }
 
+app-header {
+    position: sticky;
+    top: 16px;
+    z-index: 999;
+}
+
 app-hero {
     height: min(100%, 100dvh);
     min-height: max-content;
     flex-shrink: 0;
 }
+
+
 
 @media (max-width: 480px) {
     .content {
