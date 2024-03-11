@@ -61,7 +61,7 @@
   --color-dm-text: white;
   --color-dm-primary-default: #21d4fd;
   --color-dm-primary-hover: #86cddc;
-  --color-dm-primary-disabled: #D6E5E9;
+  --color-dm-primary-disabled: #d6e5e9;
   --color-dm-gradient: linear-gradient(#21d4fd, #0adde8);
   --color-dm-btn-outlined-default-fill: #ffffff10;
   --color-dm-btn-outlined-hover-fill: #86cddc10;
@@ -97,8 +97,6 @@ h6 {
   font-weight: 400;
   margin-block-start: 1.25rem;
   margin-block-end: 0.375rem;
-  // line-height: 1.15;
-  // letter-spacing: -0.022em;
 }
 
 h1 {
@@ -135,6 +133,8 @@ p {
   font-size: var(--font-size-p);
   line-height: 1.5;
 }
+
+/* links & buttons */
 
 a {
   text-decoration: none;
@@ -194,6 +194,25 @@ button {
     }
   }
 }
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-dm-btn-outlined-default-fill);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary-default);
+  border-radius: 40px;
+  &:hover {
+    background: var(--color-dm-primary-hover);
+  }
+}
+
+/* custom classes */
 
 .box {
   --padding-box: 64px;
