@@ -1,4 +1,4 @@
-@import "../../styles/mixin.scss";
+@import "../../../styles/mixin.scss";
 
 .box {
   @include dflex($g: 32px, $ai: flex-start);
@@ -70,6 +70,7 @@
       &:hover,
       &:focus {
         text-decoration: underline;
+        color: var(--color-primary-hover);
       }
     }
     img {

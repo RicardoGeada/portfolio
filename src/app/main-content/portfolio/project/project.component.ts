@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { Project } from '../../interfaces/project.interface';
+import { Project } from '../../../interfaces/project.interface';
 
 
 @Component({

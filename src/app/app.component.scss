@@ -1,8 +1,7 @@
 @import "../styles/mixin.scss";
 
 router-outlet {
-    display: block;
-    
+    display: none;   
 }
 
 .content {
@@ -22,12 +21,6 @@ app-header {
     position: sticky;
     top: 16px;
     z-index: 999;
-}
-
-app-hero {
-    height: min(100%, 100dvh);
-    min-height: max-content;
-    flex-shrink: 0;
 }
 
 

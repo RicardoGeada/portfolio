@@ -1,4 +1,4 @@
-@import "./../../../styles/mixin.scss";
+@import "./../../../../styles/mixin.scss";
 
 .project {
 
@@ -44,15 +44,18 @@
 
     .project-name {
       font-family: "Anton";
-      font-size: var(--font-size-h2);
-      line-height: 40px;
+      margin-block-start: 0;
+      // font-size: var(--font-size-h2);
+      // line-height: 40px;
     }
     .project-languages {
       font-family: "Oswald";
-      font-size: var(--font-size-h5);
-      line-height: 24px;
+      margin-block-start: 0;
+      // font-size: var(--font-size-h5);
+      // line-height: 24px;
     }
     .project-links {
+      margin-block-start: 16px;
       display: flex;
       gap: 8px;
     }
@@ -76,7 +79,8 @@
     }
 
     .project-text {
-      @include dflex($fd: column, $ai: flex-start, $g: 16px);
+      display: block;
+      // @include dflex($fd: column, $ai: flex-start, $g: 16px);
       animation: visibility 250ms 500ms ease-in-out forwards;
     }
 
