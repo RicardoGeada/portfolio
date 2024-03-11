@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ProjectComponent } from './project/project.component';
 import { CommonModule } from '@angular/common';
-import { Project } from '../interfaces/project.interface';
+import { Project } from '../../interfaces/project.interface';
 
 @Component({
   selector: 'app-portfolio',

@@ -1,4 +1,4 @@
-@import "../../styles/mixin.scss";
+@import "../../../styles/mixin.scss";
 
 .about-content {
 
@@ -21,6 +21,9 @@
     grid-area: greeting;
     text-align: center;
     padding: 16px;
+    h5 {
+      margin: 0;
+    }
   }
 
   .social-links {

@@ -1,0 +1,19 @@
+h1,h2,h3,h4,h5,h6,p,hr,ul {
+    margin-bottom: 0.83em;
+    margin-top: 0.83em;
+}
+
+.privacy-policy-content {
+    list-style-position: inside;
+    // word-break: break-all
+    word-wrap: break-word;
+}
+
+a {
+    color: var(--color-primary-default);
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      color: var(--color-primary-hover);
+    }
+  }
