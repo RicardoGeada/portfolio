@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { ProjectComponent } from './project/project.component';
 import { CommonModule } from '@angular/common';
 import { Project } from '../../interfaces/project.interface';
+import { AosDirective } from '../../directives/custom/aos/aos.directive';
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [CommonModule, ProjectComponent],
+  imports: [CommonModule, ProjectComponent, AosDirective],
   templateUrl: './portfolio.component.html',
-  styleUrl: './portfolio.component.scss'
+  styleUrls: ['./portfolio.component.scss', '../../../styles/aos.scss']
 })
 export class PortfolioComponent {
 

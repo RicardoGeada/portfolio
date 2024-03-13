@@ -1,9 +1,9 @@
 <div class="skills-content">
-    <div class="box">
+    <div class="box" [aos]="{class: 'fade-in-up', winTrigger: 'mid'}">
         <h2 class="headline">Skills</h2>
         <p>I have grown my frontend developments skills that have allowed me to create different real projects.</p>
     </div>
-    <div class="skills box">
+    <div class="skills box" [aos]="{class: 'popup', winTrigger: 'mid'}">
         <div *ngFor="let skill of skills" class="skill">
             <img src="./../../assets/img/skill-icons/{{ skill.toLowerCase() }}.svg" alt="{{ skill }}-icon">
             <div class="skill-name">{{ skill }}</div>
