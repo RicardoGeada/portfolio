@@ -6,7 +6,7 @@ import { AosDirective } from '../../directives/custom/aos/aos.directive';
   standalone: true,
   imports: [AosDirective],
   templateUrl: './about.component.html',
-  styleUrl: './about.component.scss'
+  styleUrls: ['./about.component.scss', '../../../styles/aos.scss']
 })
 export class AboutComponent {
 

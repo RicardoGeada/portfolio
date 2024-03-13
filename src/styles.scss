@@ -81,6 +81,7 @@
 }
 
 body {
+  overflow-x: hidden;
   background-color: rgb(25, 29, 31);
   font-family: "Montserat", sans-serif;
   font-weight: 400;
@@ -275,95 +276,5 @@ button {
 
   .box {
     --padding-box: 32px;
-  }
-}
-
-
-// AOS
-
-.bounce-in-left {
-  animation: bounceInLeft 1s linear forwards;
-  animation-play-state: paused;
-  animation-delay: inherit;
-  transform: translateX(0vh);
-
-}
-@keyframes bounceInLeft {
-  0% {
-    transform: translateX(-2000px);
-    opacity: 0;
-  }
-  60% {
-    transform: translateX(20px);
-  }
-  80% {
-    transform: translateX(-5px);
-  }
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
-.bounce-in-right {
-  animation: bounceInRight 1s linear forwards;
-  animation-play-state: paused;
-  animation-delay: inherit;
-  // transform: translateX(0vh);
-
-}
-@keyframes bounceInRight {
-  0% {
-    transform: translateX(2000px);
-    opacity: 0;
-  }
-  60% {
-    transform: translateX(-20px);
-  }
-  80% {
-    transform: translateX(5px);
-  }
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
-.popup {
-  animation: popup 500ms linear forwards;
-  animation-play-state: paused;
-  animation-delay: inherit;
-  transform: scale(0%);
-}
-
-@keyframes popup {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-  }
-  60% {
-    transform: scale(1.05);
-  }
-  80% {
-    transform: scale(0.9);
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.fade-in {
-  animation: fade-in 2s linear forwards;
-  animation-play-state: paused;
-  opacity: 0%;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0%;
-  }
-  to {
-    opacity: 100%;
   }
 }

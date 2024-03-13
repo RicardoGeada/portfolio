@@ -33,16 +33,25 @@ export class AosDirective {
     this.renderer.addClass(this.element.nativeElement, this.aos.class);
   }
 
-  @HostListener('document:scroll', [])
+  @HostListener('window:scroll', [])
   scroll(): void {
+    this.triggerAnimation();
+  }
+
+  @HostListener('window:touchmove', [])
+  touchmove(): void{
+    this.triggerAnimation();
+  }
+
+  triggerAnimation() {
     const rect = this.element.nativeElement.getBoundingClientRect();
     let scroll = this.mapRange(0, window.innerHeight, 0, 1, this.getBoxTriggerPosition(rect));
     // scroll = scroll < 0 ? 0 : scroll > 1 ? 1 : scroll;
     // this.delay = `-${scroll.toFixed(2)}s`;
-    console.log('scroll gets triggered');
+    // console.log('scroll gets triggered');
     if (+scroll.toFixed(2) <= this.getWindowTriggerPosition()) {
       this.playstate = 'running';
-      this.renderer.addClass(this.element.nativeElement,'active');
+      // this.renderer.addClass(this.element.nativeElement,'active');
     }
   }
 

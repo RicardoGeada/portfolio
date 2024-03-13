@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { AosDirective } from '../../directives/custom/aos/aos.directive';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, AosDirective],
   templateUrl: './skills.component.html',
-  styleUrl: './skills.component.scss',
+  styleUrls: ['./skills.component.scss', '../../../styles/aos.scss'],
 })
 export class SkillsComponent {
   skills: string[] = [

@@ -9,6 +9,7 @@ router-outlet {
     margin: 0 auto;
     width: 100%;
     max-width: 1440px;
+    overflow-x: hidden;
     @include dflex($fd: column, $g: 64px, $ai: normal, $jc:flex-start);
     .separator {  
         width: 100%;
@@ -27,6 +28,7 @@ app-header {
 
 @media (max-width: 480px) {
     .content {
+        
         gap: 24px;
     }
 }
