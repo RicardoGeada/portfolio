@@ -80,9 +80,17 @@
   scroll-margin-block-start: 86px;
 }
 
+html {
+  background: url('./assets/img/background-dm.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 body {
   overflow-x: hidden;
-  background-color: rgb(25, 29, 31);
+  // background-color: rgba(25, 29, 31);
   font-family: "Montserat", sans-serif;
   font-weight: 400;
   line-height: 1.5;
@@ -202,7 +210,11 @@ button {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-dm-btn-outlined-default-fill);
+  background: url('./assets/img/background-dm.png') no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -212,6 +224,7 @@ button {
     background: var(--color-dm-primary-hover);
   }
 }
+
 
 /* custom classes */
 
@@ -230,6 +243,16 @@ button {
   width: 100%;
   height: 2px;
   background-color: var(--color-btn-outlined-default-fill);
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 @media (max-width: 480px) {
