@@ -1,12 +1,9 @@
 @import "../../../styles/mixin.scss";
-.content {
+.portfolio-content {
   @include dflex($fd: column, $g: 16px, $ai: space-between);
 
   app-project {
     display: flex;
     justify-content: center;
   }
-
-
-
-}
+};

@@ -1,34 +1,24 @@
 @import "../styles/mixin.scss";
 
 router-outlet {
-    display: none;   
+  display: none;
+}
+
+.wrapper {
+  width: 100vw;
+  max-width: 100vw;
+  overflow: clip;
 }
 
 .content {
-    padding: 16px;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1440px;
-    overflow-x: hidden;
-    @include dflex($fd: column, $g: 64px, $ai: normal, $jc:flex-start);
-    .separator {  
-        width: 100%;
-        height: 2px;
-        background-color: var(--color-btn-outlined-default-fill);
-    }
+  padding: 16px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
 }
-
-app-header {
-    position: sticky;
-    top: 16px;
-    z-index: 999;
-}
-
-
 
 @media (max-width: 480px) {
-    .content {
-        
-        gap: 24px;
-    }
+  .content {
+    gap: 24px;
+  }
 }

@@ -4,7 +4,6 @@
   animation: bounceInLeft 1s linear forwards;
   animation-play-state: paused;
   animation-delay: inherit;
-  transform: translateX(0vh);
 }
 @keyframes bounceInLeft {
   0% {
@@ -27,7 +26,6 @@
   animation: bounceInRight 1s linear forwards;
   animation-play-state: paused;
   animation-delay: inherit;
-  // transform: translateX(0vh);
 }
 @keyframes bounceInRight {
   0% {

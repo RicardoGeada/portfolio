@@ -10,6 +10,12 @@ app-hero {
     flex-shrink: 0;
 }
 
+app-header {
+    position: sticky;
+    top: 16px;
+    z-index: 999;
+}
+
 
 @media (max-width: 480px) {
     .main-content {

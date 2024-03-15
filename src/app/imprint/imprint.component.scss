@@ -1,3 +1,9 @@
+@import "../../styles/mixin.scss";
+
+.imprint-content {
+    @include dflex($fd: column, $g: 64px, $ai: normal, $jc:flex-start);
+}
+
 
 a {
   color: var(--color-primary-default);
@@ -6,4 +12,10 @@ a {
     text-decoration: underline;
     color: var(--color-primary-hover);
   }
+}
+
+app-header {
+  position: sticky;
+  top: 16px;
+  z-index: 999;
 }
