@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, ElementRef} from '@angular/core';
+// import { filter, fromEvent, map } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -11,10 +12,37 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   mobileMenuOpen: boolean = false;
   mdq = window.matchMedia('(max-width: 768px)');
+  pinned : boolean = false;
 
-  constructor() {
-    this.checkMatchMedia(); 
+  stickyObserver = new IntersectionObserver(
+    ([e]) => {window.scrollY > 0 ? this.pinned = true : this.pinned = false; 
+    console.log(e)},
+    { threshold: [1] }
+  )
+
+  constructor(el: ElementRef) {
+    this.checkMatchMedia();
+    this.stickyObserver.observe(el.nativeElement); 
   }
+
+  // ngOnInit() {
+
+    // fromEvent(window, 'scroll').pipe(
+    //   map(() => window.scrollY),
+    //   filter(scrollY => scrollY >= 16)
+    // ).subscribe(() => {
+    //   this.pinned = true;
+    // });
+
+    // fromEvent(window, 'scroll').pipe(
+    //   map(() => window.scrollY),
+    //   filter(scrollY => scrollY < 16)
+    // ).subscribe(() => {
+    //   this.pinned = false;
+    // });
+
+  // }
+
 
   /* mobile nav menu */ 
 

@@ -1,4 +1,4 @@
-<nav class="navbar">
+<nav class="navbar" [ngClass]="{'pinned': pinned}">
     <!-- social links -->
     @if (!mdq.matches) {
         <div class="social-links">

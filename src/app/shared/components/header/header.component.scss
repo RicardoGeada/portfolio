@@ -8,10 +8,7 @@
   background-color: var(--color-main);
   border-radius: 40px;
 
-  // position: sticky;
-  // top: 16px;
   position: relative;
-  z-index: 1000;
 
   .social-links,
   .nav-links {
@@ -28,6 +25,38 @@
   .logo {
     width: 30px;
     aspect-ratio: 1 / 1;
+  }
+
+}
+
+/* gradient border effect */ 
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotation {
+  0% {--gradient-angle: 0deg;}
+  100% {--gradient-angle: 360deg;}
+}
+
+.pinned {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    inset: -.5rem;
+    z-index: -1;
+    background: conic-gradient(from var(--gradient-angle), rgb(73, 86, 186), rgb(73, 124, 186), rgb(73, 150, 186),  rgb(73, 124, 186), rgb(73, 86, 186));
+    border-radius: inherit;
+    animation: rotation 20s linear infinite;
+  }
+
+  &::before {
+    filter: blur(3.5rem);
   }
 
 }
@@ -81,7 +110,7 @@
   top: -16px;
   left: -16px;
   right: -16px;
-  z-index: 999;
+  z-index: -1;
   padding: 16px;
   touch-action: none;
 }
