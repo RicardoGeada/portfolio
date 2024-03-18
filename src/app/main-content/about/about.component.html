@@ -1,14 +1,10 @@
 <div class="about-content">
   <div class="about-me box" [aos]="{class: 'bounce-in-left', winTrigger: 'mid'}">
-    <h2 class="headline">About me</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores quam
-      culpa, distinctio a at ipsam maxime architecto, soluta, iste expedita ab
-      non repudiandae totam laborum laudantium eveniet libero et ipsa!
-    </p>
+    <h2 class="headline">{{ 'About me' | translate}}</h2>
+    <p>{{ 'section.about-me.description' | translate }}</p>
   </div>
   <div class="greeting box" [aos]="{class: 'popup', delay: '1s', winTrigger: 'mid'}">
-    <h5>Hello</h5>
+    <h5>{{ 'section.about-me.Hello' | translate }}</h5>
   </div>
   <div class="social-links">
     <a class="link box" href="" [aos]="{class: 'popup', delay: '1s', winTrigger: 'bottom'}">

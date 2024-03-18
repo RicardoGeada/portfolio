@@ -1,0 +1,47 @@
+{
+    "About me" : "About me",
+    "Skills" :  "Skills",
+    "Portfolio" : "Portfolio",
+    "Contact" : "Contact",
+    "Imprint" : "Imprint",
+    "section" : {
+        "hero" : {
+            "contact-button" : "GET IN CONTACT"
+        },
+        "about-me" : {
+            "Hello" : "Hello",
+            "description" : "Hi, I'm Ricardo, a frontend developer from Rhineland-Palatinate, Germany. \nMy goal is to realize visually appealing and interactive user interfaces. \nMy studies in media design have sharpened my eye for detail and brought out my visual aspirations. \nI acquired the technical skills for the implementation of web applications in a further training course at the Developer Akademie GmbH. \nWith the combined skills in creativity and technology I am now looking for a team to realize interesting projects together."
+        },
+        "skills" : {
+            "description" : "Here is a list of the technologies I have familiarized myself with in my projects."
+        },
+        "portfolio" : {
+            "description" : "Take a look at my projects and see for yourself."
+        },
+        "contact" : {
+            "name" : "Name",
+            "email" : "Email",
+            "message" : "Message",
+            "name-notification" : "Please enter your name.",
+            "email-notification" : "Please enter your name.",
+            "message-notification" : "Please enter your name.",
+            "text" : {
+                "question" : "Do you need support with a project?",
+                "answer" : "Then let's realise your ideas together!",
+                "call-to-action" : "I look forward to hearing from you."
+            },
+            "privacy-policy-terms" : {
+                "before" : "I've read the ",
+                "privacy-policy" : "privacy policy",
+                "after" : "and agree to the processing of my data as outlined.",
+                "notification" : "Please accept the privacy policy."
+            },
+            "submit-button" : "Let's work together!"
+        }
+    },
+    "project" : {
+        "ThroughtheForest" : {
+            "description" : "Jump & Run Game"
+        }
+    }
+}

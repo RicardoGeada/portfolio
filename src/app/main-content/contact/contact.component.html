@@ -1,9 +1,9 @@
 <div class="contact-container box" [aos]="{class: 'fade-in', winTrigger: 'bottom'}">
   <div class="text">
-    <h2 class="headline">Contact</h2>
-    <h5>Got a problem to solve?</h5>
-    <p>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.</p><br>
-    <p>Need a Frontend developer? Contact me!</p>
+    <h2 class="headline">{{ "Contact" | translate }}</h2>
+    <h5>{{ 'section.contact.text.question' | translate }}</h5>
+    <p>{{ 'section.contact.text.answer' | translate }}</p><br>
+    <p>{{ 'section.contact.text.call-to-action' | translate }}</p>
   </div>
   <div class="form">
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
@@ -14,13 +14,13 @@
             type="text"
             id="name"
             name="name"
-            placeholder="Name"
+            placeholder="{{ 'section.contact.name' | translate }}"
             required
             #name="ngModel"
           />
         </div>
         @if (!name.valid && (name.touched || contactForm.submitted)) {
-        <div class="notification">Please enter your name</div>
+        <div class="notification">{{ "section.contact.name-notification" | translate }}</div>
         }
       </div>
 
@@ -31,14 +31,14 @@
             type="email"
             id="email"
             name="email"
-            placeholder="Email"
+            placeholder="{{ 'section.contact.email' | translate }}"
             required
             #email="ngModel"
             pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
           />
         </div>
         @if (!email.valid && (email.touched || contactForm.submitted)) {
-        <div class="notification">Please enter your email</div>
+        <div class="notification">{{ "section.contact.email-notification" | translate }}</div>
         }
       </div>
 
@@ -48,14 +48,14 @@
             [(ngModel)]="contactData.message"
             id="message"
             name="message"
-            placeholder="Your message"
+            placeholder="{{ 'section.contact.message' | translate }}"
             required
             #message="ngModel"
           ></textarea>
         </div>
 
         @if (!message.valid && (message.touched || contactForm.submitted)) {
-        <div class="notification">Please enter a message</div>
+        <div class="notification">{{ "section.contact.message-notification" | translate }}</div>
         }
       </div>
 
@@ -67,11 +67,11 @@
           </button>
 
           <div class="pp-text">
-            <span>I've read the </span>
-            <a href="privacy-policy">privacy policy</a>
-            <span> and agree to the processing of my data as outlined.</span>
+            <span>{{ "section.contact.privacy-policy-terms.before" | translate }}</span>
+            <a href="privacy-policy">{{ "section.contact.privacy-policy-terms.privacy-policy" | translate }}</a>
+            <span> {{ "section.contact.privacy-policy-terms.after" | translate }}</span>
             @if (buttonDisabled && unchecked) {
-              <div class="notification">Please accept the privacy policy.</div>
+              <div class="notification">{{ "section.contact.privacy-policy-terms.notification" | translate }}</div>
               }
           </div>
           
@@ -79,7 +79,7 @@
         
       </div>
       <div class="pp-btn-container">
-        <button class="btn-filled" type="submit" #submitbutton [disabled]="unchecked">Let's work together.</button>
+        <button class="btn-filled" type="submit" #submitbutton [disabled]="unchecked">{{ "section.contact.submit-button" | translate }}</button>
         <div class="disabled-btn-overlay" (click)="buttonDisabled = true" *ngIf="unchecked"></div>
       </div>
         

@@ -1,7 +1,7 @@
 <div class="portfolio-content">
     <div class="box" [aos]="{class: 'fade-in-up', winTrigger: 'mid'}">
-        <h2 class="headline">Portfolio</h2>
-        <p>This page is a sample of my work - please feel free to try them out.</p>
+        <h2 class="headline">{{ "Portfolio" | translate }}</h2>
+        <p>{{ "section.portfolio.description" | translate }}</p>
     </div>
     <app-project *ngFor="let project of projectsdata.projects, let even = even" [project]="project" [aos]="even ? {class: 'bounce-in-left' , winTrigger: 'mid'} : {class: 'bounce-in-right' , winTrigger: 'mid'} "></app-project>
 </div>

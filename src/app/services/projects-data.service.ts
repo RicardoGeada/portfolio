@@ -20,7 +20,7 @@ export class ProjectsDataService {
     {
       name :  'Through the Forest',
       languages: 'HTML | CSS | JavaScript | OOP',
-      description: 'Hilf dem Helden dieses Jump-and-Run Spiels die Gefahren des Waldes zu überstehen und sicher nach Hause zu gelangen.',
+      description: 'project.ThroughtheForest.description',
       link: 'https://throughtheforest.ricardogeada.com',
       github: 'https://github.com/RicardoGeada/through_the_forest',
       image: 'project-through-the-forest.png'
