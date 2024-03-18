@@ -1,29 +1,33 @@
 <div class="imprint-content">
   <app-header></app-header>
   <div class="imprint box">
-    <h2>Impressum</h2>
-    <h4>Angaben gemäß § 5 TMG:</h4>
-    <p><br />Frontend Entwickler<br />Ricardo Geada</p>
-    <h6>Postanschrift:</h6>
-    <p>Stettinerstraße 20<br />55566 Bad Sobernheim<br /></p>
-    <h6>Kontakt:</h6>
+    <h2>{{ "imprint.imprint" | translate }}</h2>
+    <h4>{{ "imprint.§5TMG" | translate }}</h4>
     <p>
-      Telefon: <br/>
+      <br/>{{ "imprint.profession" | translate }}
+      <br/>Ricardo Geada
+    </p>
+    <h6>{{ "imprint.address" | translate }}:</h6>
+    <p>
+      Stettinerstraße 20<br/>
+      55566 Bad Sobernheim<br/>
+    </p>
+    <h6>{{ "imprint.contact" | translate }}:</h6>
+    <p>
+      {{ "imprint.phone" | translate }}: <br/>
       E-Mail: ricardogeada.dev&commat;gmail.com
     </p>
     <p></p>
     <p><br /></p>
     <p></p>
-    <h4>Hinweise zur Website</h4>
+    <h4>{{ "imprint.notes-website" | translate }}</h4>
     <p></p>
     <p>
-      <em
-        >Das Impressum wurde mit dem
-        <a href="https://www.activemind.de/datenschutz/generatoren/impressum/"
-          >Impressums-Generator der activeMind AG</a
-        >
-        erstellt.</em
-      >
+      <em>
+        {{ "imprint.activeMind.before" | translate }}
+        <a href="https://www.activemind.de/datenschutz/generatoren/impressum/">
+          {{ "imprint.activeMind.link" | translate }}</a>{{ "imprint.activeMind.after" | translate }}
+      </em>
     </p>
   </div>
   <app-footer></app-footer>

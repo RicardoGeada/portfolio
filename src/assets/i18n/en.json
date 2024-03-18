@@ -43,5 +43,20 @@
         "ThroughtheForest" : {
             "description" : "Jump & Run Game"
         }
+    },
+
+    "imprint" : {
+        "imprint" : "Imprint",
+        "§5TMG" : "Information according to §5 TMG:",
+        "profession" : "Frontend Developer",
+        "address" : "Postal address",
+        "contact" : "Contact",
+        "phone" : "Phone",
+        "notes-website" : "Notes on the website",
+        "activeMind" : {
+            "before" : "The imprint was created with the",
+            "link" : "imprint generator of activeMind AG",
+            "after" : "."
+        }
     }
 }
