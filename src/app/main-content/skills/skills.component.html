@@ -1,7 +1,7 @@
 <div class="skills-content">
     <div class="box" [aos]="{class: 'fade-in-up', winTrigger: 'mid'}">
-        <h2 class="headline">Skills</h2>
-        <p>I have grown my frontend developments skills that have allowed me to create different real projects.</p>
+        <h2 class="headline">{{ "Skills" | translate }}</h2>
+        <p>{{ "section.skills.description" | translate }}</p>
     </div>
     <div class="skills box" [aos]="{class: 'popup', winTrigger: 'mid'}">
         <div *ngFor="let skill of skills" class="skill">

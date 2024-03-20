@@ -5,6 +5,7 @@
 
   .text {
     max-width: 500px;
+    width: 100%;
     // @include dflex($g: 16px, $fd: column, $ai: flex-start);
   }
   .form {

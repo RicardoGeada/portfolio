@@ -32,9 +32,12 @@
     <!-- nav links -->
     @if (!mdq.matches) {
         <div class="nav-links">
-            <a href="#about">About me</a>
-            <a href="#skills">Skills</a>
-            <a href="#portfolio">Portfolio</a>
+            <a href="#about">{{'About me' | translate}}</a>
+            <a href="#skills">{{'Skills' | translate}}</a>
+            <a href="#portfolio">{{'Portfolio' | translate}}</a>
+            <button (click)="useLanguage('de')">de</button>
+            |
+            <button (click)="useLanguage('en')">en</button>
         </div>
     }
 
@@ -55,10 +58,10 @@
     <div class="overlay-bg">
         <div class="overlay-menu box">
             <div class="nav-links">
-                <a href="#about" (click)="scrollTo('about')">About me</a>
-                <a href="#skills" (click)="scrollTo('skills')">Skills</a>
-                <a href="#portfolio" (click)="scrollTo('portfolio')">Portfolio</a>
-                <a href="#contact" (click)="scrollTo('contact')">Contact</a>
+                <a href="#about" (click)="scrollTo('about')">{{'About me' | translate}}</a>
+                <a href="#skills" (click)="scrollTo('skills')">{{'Skills' | translate}}</a>
+                <a href="#portfolio" (click)="scrollTo('portfolio')">{{'Portfolio' | translate}}</a>
+                <a href="#contact" (click)="scrollTo('contact')">{{'Contact' | translate}}</a>
             </div>
         </div>
     </div>

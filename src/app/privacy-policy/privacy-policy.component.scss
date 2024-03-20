@@ -22,8 +22,9 @@ a {
 
 app-header {
   position: sticky;
-  top: 16px;
+  top: -1px;
   z-index: 999;
+  padding-top: 17px;
 }
 
 
