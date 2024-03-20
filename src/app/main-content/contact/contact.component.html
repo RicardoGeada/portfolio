@@ -1,10 +1,16 @@
 <div class="contact-container box" [aos]="{class: 'fade-in', winTrigger: 'bottom'}">
-  <div class="text">
-    <h2 class="headline">{{ "Contact" | translate }}</h2>
-    <h5>{{ 'section.contact.text.question' | translate }}</h5>
-    <p>{{ 'section.contact.text.answer' | translate }}</p><br>
-    <p>{{ 'section.contact.text.call-to-action' | translate }}</p>
+  <div class="left-side">
+    <div class="text">
+      <h2 class="headline">{{ "Contact" | translate }}</h2>
+      <h5>{{ 'section.contact.text.question' | translate }}</h5>
+      <p>{{ 'section.contact.text.answer' | translate }}</p><br>
+      <p>{{ 'section.contact.text.call-to-action' | translate }}</p>
+    </div>
+    <div class="img-container">
+      <img src="assets/img/profile/hero-profile-rg.png" alt="">
+    </div>
   </div>
+  
   <div class="form">
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
       <div class="input-container" (click)="setFocus('name')">
