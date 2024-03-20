@@ -44,3 +44,7 @@ Thumbs.db
 # Environments
 /src/environments/environment.ts
 /src/environments/environment.development.ts
+
+# Other
+/src/assets/img/profile/hero-profile-rg.png
+/src/assets/img/profile/about-profile-rg.png

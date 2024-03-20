@@ -46,6 +46,7 @@
     @include dflex($ai: end);
     padding: 0;
     overflow: hidden;
+    max-height: 500px;
     img {
       height: 100%;
     }
@@ -65,6 +66,8 @@
       "socials";
     .profile-photo {
       max-height: 300px;
+      width: fit-content;
+      margin: 0 auto;
     }
   }
 }

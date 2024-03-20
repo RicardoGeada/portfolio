@@ -8,7 +8,8 @@
         @include dflex($g: 16px);
     }
     
-    a {
+    a,
+    .copyright {
         max-height: 30px;
         font-family: "Oswald";
         font-weight: 300;
@@ -23,7 +24,8 @@
         flex-direction: column;
         padding: 16px 32px;
 
-        a {
+        a,
+        .copyright {
             font-size: 16px;
         }
     }
