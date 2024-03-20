@@ -2,16 +2,33 @@
 
 .box {
   @include dflex($g: 32px, $ai: flex-start);
+  position: relative;
 
   .text {
     max-width: 500px;
     width: 100%;
-    // @include dflex($g: 16px, $fd: column, $ai: flex-start);
   }
   .form {
     max-width: 500px;
     width: 100%;
   }
+}
+
+.left-side {
+  max-width: 500px;
+  width: 100%;
+
+  .img-container {
+    width: 100%;
+    max-width: 500px;
+    position: absolute;
+    bottom: 0;
+    img {
+      width: 90%;
+      filter: grayscale(1);
+    }
+  }
+
 }
 
 .form form {
@@ -120,5 +137,9 @@
   .box {
     flex-direction: column;
     align-items: center;
+
+    .img-container {
+      display: none;
+    }
   }
 }
