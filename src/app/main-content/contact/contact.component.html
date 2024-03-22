@@ -68,15 +68,18 @@
       <div class="privacy-policy-container">
         <div class="dflex">
           
-          <button class="checkbox" type="button" (click)="unchecked = !unchecked">
-            <img src="./../../assets/img/{{unchecked ? 'unchecked' : 'checked'}}.svg" alt="checkbox">
-          </button>
+
+          <div class="checkbox">
+            <input [(ngModel)]="checked" class="checkbox" type="checkbox" id="checkbox" name="checkbox" #checkbox="ngModel" required>
+            <img src="./../../assets/img/{{!checked ? 'unchecked' : 'checked'}}.svg" alt="checkbox">
+          </div>
+          
 
           <div class="pp-text">
             <span>{{ "section.contact.privacy-policy-terms.before" | translate }}</span>
             <a href="privacy-policy">{{ "section.contact.privacy-policy-terms.privacy-policy" | translate }}</a>
             <span> {{ "section.contact.privacy-policy-terms.after" | translate }}</span>
-            @if (buttonDisabled && unchecked) {
+            @if (buttonDisabled && !checked) {
               <div class="notification">{{ "section.contact.privacy-policy-terms.notification" | translate }}</div>
               }
           </div>
@@ -85,8 +88,8 @@
         
       </div>
       <div class="pp-btn-container">
-        <button class="btn-filled" type="submit" #submitbutton [disabled]="unchecked">{{ "section.contact.submit-button" | translate }}</button>
-        <div class="disabled-btn-overlay" (click)="buttonDisabled = true" *ngIf="unchecked"></div>
+        <button class="btn-filled" type="submit" #submitbutton [disabled]="!checked">{{ "section.contact.submit-button" | translate }}</button>
+        <div class="disabled-btn-overlay" (click)="buttonDisabled = true" *ngIf="!checked"></div>
       </div>
         
       

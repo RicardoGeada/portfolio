@@ -14,7 +14,7 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class ContactComponent {
   
-  unchecked : boolean = true;
+  checked : boolean = false;
   buttonDisabled: boolean = false;
 
   http = inject(HttpClient);

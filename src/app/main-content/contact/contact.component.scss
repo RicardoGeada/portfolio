@@ -101,6 +101,14 @@
     }
 
     .checkbox {
+      position: relative;
+      input {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
       &:hover,
       &:focus {
         background-color: var(--color-primary-hover);

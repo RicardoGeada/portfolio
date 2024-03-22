@@ -16,7 +16,9 @@
     text-align: center;
     &:hover {
       font-weight: bold;
-      gap: 16px;
+      img {
+        transform: scale(1.1);
+      }
     }
   }
 }
