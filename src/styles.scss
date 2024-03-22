@@ -161,6 +161,9 @@ button {
   background-color: transparent;
   outline: none;
   border: none;
+  &:hover {
+    color: var(--color-dm-primary-hover);
+  }
 }
 
 .btn {
@@ -298,5 +301,11 @@ button {
 
   .box {
     --padding-box: 32px;
+  }
+}
+
+@media (max-width: 320px) {
+  .btn {
+    padding: 8px 16px;
   }
 }

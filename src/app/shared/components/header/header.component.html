@@ -35,9 +35,11 @@
             <a href="#about">{{'About me' | translate}}</a>
             <a href="#skills">{{'Skills' | translate}}</a>
             <a href="#portfolio">{{'Portfolio' | translate}}</a>
-            <button (click)="useLanguage('de')">de</button>
-            |
-            <button (click)="useLanguage('en')">en</button>
+            <div class="language-selection">
+                <button (click)="useLanguage('de')">de</button>
+                |
+                <button (click)="useLanguage('en')">en</button>
+            </div>
         </div>
     }
 
@@ -62,6 +64,11 @@
                 <a href="#skills" (click)="scrollTo('skills')">{{'Skills' | translate}}</a>
                 <a href="#portfolio" (click)="scrollTo('portfolio')">{{'Portfolio' | translate}}</a>
                 <a href="#contact" (click)="scrollTo('contact')">{{'Contact' | translate}}</a>
+                <div class="language-selection">
+                    <button (click)="useLanguage('de')">de</button>
+                    |
+                    <button (click)="useLanguage('en')">en</button>
+                </div>
             </div>
         </div>
     </div>
