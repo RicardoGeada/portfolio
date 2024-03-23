@@ -4,12 +4,16 @@
   @include dflex($fd: column, $g: 16px, $jc: flex-start, $ai: normal);
   position: relative;
   min-height: max(calc(100dvh - 16px), calc(100%));
+  height: calc(100dvh - 17px - 62px - 64px + 48px); // Viewport - Padding - Navbar - Gap
+  margin-top: -48px;
 }
 
 .hero-headline {
   display: flex;
   justify-content: center;
-  padding: 64px 0;
+  padding: 64px 32px;
+  max-height: calc(100% - 128px);
+  height: fit-content;
   background-color: var(--color-main);
   border-radius: 40px;
 
@@ -33,7 +37,7 @@
   .header {
     @include font(
       $ff: "Anton",
-      $fs: clamp(3rem, 16vw, 14.375rem),
+      $fs: clamp(3rem, 16vmin, 14.375rem), //vmin for landscape height
       $fw: 300,
       $lh: 0.875
     );
@@ -125,27 +129,40 @@
   @include dflex($fd: column, $g: 0);
   position: absolute;
   bottom: 0;
-  left: 50%;
-  right: 50%;
-  transform: translate(-50%, 0);
+  // left: 50%;
+  // right: 50%;
+  // transform: translate(-50%, 0);
   width: 100%;
   pointer-events: none;
   .hero-img {
     width: 100%;
     max-width:  900px;
-    padding: 0 80px;
+    // padding: 0 80px;
+    object-fit: contain;
+    max-height: 50dvh;
   }
 }
 
 // MEDIA QUERIES
 
 @media (max-width: 768px) {
+  .hero-content {
+    height: calc(100dvh - 17px - 46px - 64px + 48px); // Viewport - Padding - Navbar - Gap
+    margin-top: -48px;
+  }
+
   .hero-headline {
     padding: 32px;
   }
 }
 
+
 @media (max-width: 480px) {
+  .hero-content {
+    height: calc(100dvh - 17px - 46px - 24px + 8px); // Viewport - Padding - Navbar - Gap
+    margin-top: -8px;
+  }
+
   .hero-headline {
     padding: 32px;
     .subheader {
@@ -160,9 +177,40 @@
     }
   }
   .hero-profile {
-    position: relative;
+    // position: relative;
     .hero-img {
       padding: 0;
     }
+  }
+}
+
+
+@media (min-aspect-ratio:1440/900) and (max-height: 480px) and (orientation: landscape) {
+  .hero-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .hero-headline {
+    width: 50%;
+    min-height: calc(100% - 16px);
+    .header {
+      font-size: clamp(3rem, 16vh, 14.375rem);
+    }
+  }
+  .cta-container {
+        height: 25vh;
+        width: 50%;
+        padding: 0;
+        justify-content: center;
+        .scroll-icon {
+          display: none;
+        }
+  }
+  .hero-profile {
+    width: 50%;
+    // transform: translate(0);
+    right: 0;
+    // left: unset;
   }
 }
