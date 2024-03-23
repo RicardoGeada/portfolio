@@ -1,9 +1,9 @@
 <div class="skills-content">
-    <div class="box" [aos]="{class: 'fade-in-up', winTrigger: 'mid'}">
+    <div class="box" [aos]="{class: 'fade-in-up', winTrigger: 'bottom'}">
         <h2 class="headline">{{ "Skills" | translate }}</h2>
         <p>{{ "section.skills.description" | translate }}</p>
     </div>
-    <div class="skills box" [aos]="{class: 'popup', winTrigger: 'mid'}">
+    <div class="skills box" [aos]="{class: 'popup', winTrigger: 'bottom'}">
         <div *ngFor="let skill of skills" class="skill">
             <img src="./../../assets/img/skill-icons/{{ skill.toLowerCase() }}.svg" alt="{{ skill }}-icon">
             <div class="skill-name">{{ skill }}</div>
