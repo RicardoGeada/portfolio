@@ -33,8 +33,11 @@
     justify-content: space-between;
     gap: 16px;
 
-    .link {
+    a {
       width: 100%;
+    }
+
+    .link {
       @include dflex();
       padding: 16px;
     }

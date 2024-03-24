@@ -239,6 +239,22 @@ button {
   .headline {
     margin-block-start: 0;
   }
+
+  &-hover {
+    @extend .box;
+    position: relative;
+    &:hover {
+      &:before {
+        content: '';
+        position: absolute;
+        inset: -2px;
+        z-index: -1;
+        background: var(--color-gradient);
+        border-radius: inherit;
+        filter: blur(8px);
+      }
+    }
+  }
 }
 
 .separator {
