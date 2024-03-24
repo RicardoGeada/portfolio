@@ -141,6 +141,19 @@
   }
 }
 
+/* submit-notification */
+app-submit-notification {
+  position: absolute;
+  transform: translate(0, -50%);
+  top: 50%;
+  opacity: 0%;
+  pointer-events: none;
+  transition: opacity 250ms ease-in-out;
+  &.show-notification {
+    opacity: 100%;
+  }
+}
+
 @media (max-width: 876px) {
   .box {
     flex-direction: column;

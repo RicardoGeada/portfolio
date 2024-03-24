@@ -36,7 +36,11 @@
                 "after" : "and agree to the processing of my data as outlined.",
                 "notification" : "Please accept the privacy policy."
             },
-            "submit-button" : "Let's work together!"
+            "submit-button" : "Let's work together!",
+            "submit-notification" : {
+                "headline" : "Thank you for your interest.",
+                "message" : "Your email has been send."
+            }
         }
     },
     "project" : {

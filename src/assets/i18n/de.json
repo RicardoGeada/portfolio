@@ -36,7 +36,11 @@
                 "after" : "gelesen und stimme der Verarbeitung meiner Daten gemäß den Bestimmungen zu.",
                 "notification" : "Bitte akzeptieren Sie die Datenschutzbestimmungen."
             },
-            "submit-button" : "Lassen Sie uns zusammenarbeiten!"
+            "submit-button" : "Lassen Sie uns zusammenarbeiten!",
+            "submit-notification" : {
+                "headline" : "Vielen Dank für Ihr Interesse.",
+                "message" : "Ihre E-Mail wurde versendet."
+            }
         }
     },
     "project" : {

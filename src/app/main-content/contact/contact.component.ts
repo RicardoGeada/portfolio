@@ -4,11 +4,12 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { AosDirective } from '../../directives/custom/aos/aos.directive';
 import { TranslateModule } from '@ngx-translate/core';
+import { SubmitNotificationComponent } from './submit-notification/submit-notification.component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule, AosDirective, TranslateModule],
+  imports: [FormsModule, CommonModule, SubmitNotificationComponent, AosDirective, TranslateModule],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss', '../../../styles/aos.scss'],
 })
@@ -16,6 +17,7 @@ export class ContactComponent {
   
   checked : boolean = false;
   buttonDisabled: boolean = false;
+  submitted : boolean = false;
 
   http = inject(HttpClient);
   
@@ -54,6 +56,8 @@ export class ContactComponent {
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
+      this.submitted = true;
+      setTimeout(() => this.submitted = false, 2500);
     }
   }
 

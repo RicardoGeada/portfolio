@@ -1,0 +1,7 @@
+.submit-notification {
+    background-color: var(--color-text);
+    text-align: center;
+    .message, .headline {
+        color: var(--color-main);
+    }
+}
