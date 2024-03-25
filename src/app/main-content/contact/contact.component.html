@@ -15,6 +15,8 @@
   <!-- right side / form -->
   <div class="form">
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+
+      <!-- name -->
       <div class="input-container" (click)="setFocus('name')">
         <div class="border" [ngClass]="{ invalid: !name.valid && (name.touched || contactForm.submitted), valid: name.valid && name.touched }">
           <input
@@ -32,6 +34,7 @@
         }
       </div>
 
+      <!-- email -->
       <div class="input-container" (click)="setFocus('email')">
         <div class="border" [ngClass]="{ invalid: !email.valid && (email.touched || contactForm.submitted), valid: email.valid && email.touched}">
           <input
@@ -50,6 +53,7 @@
         }
       </div>
 
+      <!-- message -->
       <div class="input-container" (click)="setFocus('message')">
         <div class="border" [ngClass]="{ invalid: !message.valid && (message.touched || contactForm.submitted), valid: message.valid && message.touched }">
           <textarea
@@ -67,15 +71,13 @@
         }
       </div>
 
+      <!-- privacy policy check -->
       <div class="privacy-policy-container">
         <div class="dflex">
-          
-
           <div class="checkbox">
             <input [(ngModel)]="checked" class="checkbox" type="checkbox" id="checkbox" name="checkbox" #checkbox="ngModel" required>
             <img src="./../../assets/img/{{!checked ? 'unchecked' : 'checked'}}.svg" alt="checkbox">
           </div>
-          
 
           <div class="pp-text">
             <span>{{ "section.contact.privacy-policy-terms.before" | translate }}</span>
@@ -85,20 +87,19 @@
               <div class="notification">{{ "section.contact.privacy-policy-terms.notification" | translate }}</div>
               }
           </div>
-          
         </div>
-        
       </div>
-      <div class="pp-btn-container">
+
+      <!-- submit button -->
+      <div class="submit-btn-container">
         <button class="btn-filled" type="submit" #submitbutton [disabled]="!checked">{{ "section.contact.submit-button" | translate }}</button>
         <div class="disabled-btn-overlay" (click)="buttonDisabled = true" *ngIf="!checked"></div>
       </div>
         
-      
     </form>
   </div>
 
-
+  <!-- submit notification -->
   @if (submitted) {
     <app-submit-notification [ngClass]="{'show-notification' : submitted}"></app-submit-notification>
   }

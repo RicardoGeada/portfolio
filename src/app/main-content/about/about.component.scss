@@ -50,8 +50,10 @@
     padding: 0;
     overflow: hidden;
     max-height: 500px;
+    min-width: 200px;
     img {
       height: 100%;
+      object-fit: contain;
     }
   }
   
