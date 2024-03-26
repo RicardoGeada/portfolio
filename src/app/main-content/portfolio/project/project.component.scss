@@ -141,8 +141,9 @@
       animation: box-scale-mobile 250ms ease-out forwards; 
       .project-image {
         &.visible {
-          width: calc((100% - 2 * var(--padding-box)));
-          animation: image-slide-mobile 500ms ease-in-out 0ms forwards;
+          // width: calc((100% - 2 * var(--padding-box)));
+          max-width: 400px;
+          animation: image-slide-mobile 500ms ease-out 0ms forwards;
         }
         &.invisible {
           width: 100%;
@@ -157,11 +158,11 @@
       @keyframes box-scale-mobile {
         0% {
           width: 100%;
-          min-width: 100%;
+          max-width: 400px;
         }
         100% {
           width: 100%;
-          min-width: 100%;
+          max-width: 100%;
         }
       }
 
@@ -170,18 +171,21 @@
           left: 50%;
           bottom: 50%;
           transform: translate(-50%,50%);
+          max-width: 400px;
         }
         50% {
           left: 50%;
           bottom: var(--padding-box);
           transform: translate(-50%,0);
           width: calc(100% - 2 * var(--padding-box));
+          max-width: 100%;
         }
         100% {
           transform: translate(0,0);
           bottom: var(--padding-box);
           left: var(--padding-box);
           width: calc((100% - 2 * var(--padding-box)));
+          max-width: 100%;
         }
       }
       
