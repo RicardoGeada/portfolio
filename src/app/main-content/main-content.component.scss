@@ -4,20 +4,12 @@
     @include dflex($fd: column, $g: 64px, $ai: normal, $jc:flex-start);
 }
 
-app-hero {
-    height: max(100%, calc(100dvh - 143px));
-    min-height: max-content;
-    flex-shrink: 0;
-    
-}
-
 app-header {
     position: sticky;
     top: -1px;
     z-index: 999;
     padding-top: 17px;
 }
-
 
 @media (max-width: 480px) {
     .main-content {

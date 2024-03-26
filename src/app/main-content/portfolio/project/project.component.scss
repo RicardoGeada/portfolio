@@ -3,10 +3,8 @@
 
 .project {
 
-  // overflow: hidden;
   width: 100%;
   max-width: fit-content;
-  // position: relative;
   cursor: pointer;
   @include dflex($jc: flex-start);
 
@@ -48,14 +46,10 @@
     .project-name {
       font-family: "Anton";
       margin-block-start: 0;
-      // font-size: var(--font-size-h2);
-      // line-height: 40px;
     }
     .project-languages {
       font-family: "Oswald";
       margin-block-start: 0;
-      // font-size: var(--font-size-h5);
-      // line-height: 24px;
     }
     .project-links {
       margin-block-start: 16px;
@@ -83,7 +77,6 @@
 
     .project-text {
       display: block;
-      // @include dflex($fd: column, $ai: flex-start, $g: 16px);
       animation: visibility 250ms 500ms ease-in-out forwards;
     }
 

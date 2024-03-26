@@ -21,6 +21,6 @@ export class SkillsComponent {
     'Git',
     'CSS',
     'Rest-Api',
-    'Material-Design',
+    'Material-Design'
   ];
 }

@@ -20,7 +20,6 @@ export class ContactComponent {
   submitted : boolean = false;
 
   http = inject(HttpClient);
-  
 
   contactData = {
     name: '',
@@ -41,6 +40,11 @@ export class ContactComponent {
     },
   };
 
+
+  /**
+   * onSubmit
+   * @param {NgForm} ngForm 
+   */
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http
@@ -61,6 +65,11 @@ export class ContactComponent {
     }
   }
 
+  
+  /**
+   * set focus on element
+   * @param {string} id - id of the element that should be focused
+   */
   setFocus(id: string) {
     document.getElementById(id)?.focus();
   }

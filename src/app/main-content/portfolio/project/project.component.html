@@ -1,10 +1,13 @@
 <div class="project box-hover" [ngClass]="{'active' : active}" (click)="active = !active">
+    <!-- project image  -->
     <div class="project-image visible">
         <img src="./../../../assets/img/projects/{{ project.image }}" alt="project-{{ project.name }}">
     </div>
+    <!-- invisible image to keep the box size -->
     <div class="project-image invisible">
     </div>
 
+    <!-- project text -->
     <div class="wrapper">
         <div class="project-text">
             <h2 class="project-name">{{ project.name | translate }}</h2>

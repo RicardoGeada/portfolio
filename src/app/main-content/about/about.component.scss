@@ -15,7 +15,6 @@
 
   .about-me {
     grid-area: about-me;
-    padding: 64px;
   }
 
   .greeting {
@@ -56,7 +55,6 @@
       object-fit: contain;
     }
   }
-  
 }
 
 
@@ -70,17 +68,10 @@
       "about-me"
       "socials";
     .profile-photo {
-      max-height: 300px;
+      max-height: 320px;
       width: fit-content;
       margin: 0 auto;
     }
   }
 }
 
-@media (max-width: 480px) {
-  .about-content {
-    .about-me {
-      padding: 40px !important;
-    }
-  }
-}

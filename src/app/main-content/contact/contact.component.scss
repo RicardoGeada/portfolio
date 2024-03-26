@@ -1,23 +1,17 @@
 @import "../../../styles/mixin.scss";
 
-.box {
+.contact {
   @include dflex($g: 32px, $ai: flex-start);
   position: relative;
 
-  .text {
-    max-width: 500px;
-    width: 100%;
-  }
-  .form {
+  .left-side,
+  .right-side {
     max-width: 500px;
     width: 100%;
   }
 }
 
 .left-side {
-  max-width: 500px;
-  width: 100%;
-
   .img-container {
     width: 100%;
     max-width: 500px;
@@ -28,10 +22,9 @@
       filter: grayscale(1);
     }
   }
-
 }
 
-.form form {
+.form {
   @include dflex($g: 0px, $fd: column);
   .input-container {
     width: 100%;
@@ -87,21 +80,12 @@
   }
 
   .privacy-policy-container {
-    a {
-      color: var(--color-primary-default);
-      &:hover,
-      &:focus {
-        text-decoration: underline;
-        color: var(--color-primary-hover);
-      }
-    }
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+
     img {
       vertical-align: middle;
-    }
-    .dflex {
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
     }
 
     .checkbox {
@@ -125,6 +109,7 @@
       padding-bottom: 20px;
       position: relative;
     }
+
     .notification {
       color: var(--color-error);
       font-size: 12px;
@@ -132,6 +117,7 @@
       bottom: 6px;
       height: 16px;
     }
+
   }
 }
 
@@ -159,11 +145,12 @@ app-submit-notification {
   }
 }
 
+
+// MEDIA QUERIES
 @media (max-width: 876px) {
-  .box {
+  .contact {
     flex-direction: column;
     align-items: center;
-
     .img-container {
       display: none;
     }

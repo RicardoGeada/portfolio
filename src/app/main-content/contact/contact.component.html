@@ -1,4 +1,4 @@
-<div class="contact-container box" [aos]="{class: 'fade-in', winTrigger: 'bottom'}">
+<div class="contact box" [aos]="{class: 'fade-in', winTrigger: 'bottom'}">
   <!-- left side / text + image -->
   <div class="left-side">
     <div class="text">
@@ -13,8 +13,8 @@
   </div>
   
   <!-- right side / form -->
-  <div class="form">
-    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+  <div class="right-side">
+    <form class="form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
       <!-- name -->
       <div class="input-container" (click)="setFocus('name')">
@@ -73,7 +73,6 @@
 
       <!-- privacy policy check -->
       <div class="privacy-policy-container">
-        <div class="dflex">
           <div class="checkbox">
             <input [(ngModel)]="checked" class="checkbox" type="checkbox" id="checkbox" name="checkbox" #checkbox="ngModel" required>
             <img src="./../../assets/img/{{!checked ? 'unchecked' : 'checked'}}.svg" alt="checkbox">
@@ -81,13 +80,12 @@
 
           <div class="pp-text">
             <span>{{ "section.contact.privacy-policy-terms.before" | translate }}</span>
-            <a href="privacy-policy">{{ "section.contact.privacy-policy-terms.privacy-policy" | translate }}</a>
+            <a class="text-link" href="privacy-policy">{{ "section.contact.privacy-policy-terms.privacy-policy" | translate }}</a>
             <span> {{ "section.contact.privacy-policy-terms.after" | translate }}</span>
             @if (buttonDisabled && !checked) {
               <div class="notification">{{ "section.contact.privacy-policy-terms.notification" | translate }}</div>
               }
           </div>
-        </div>
       </div>
 
       <!-- submit button -->
