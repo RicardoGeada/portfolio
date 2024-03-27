@@ -10,10 +10,10 @@
         },
         "about-me" : {
             "Hello" : "Hello",
-            "description" : "Hi, I'm Ricardo, a frontend developer from Rhineland-Palatinate, Germany. \nMy goal is to realize visually appealing and interactive user interfaces. \nMy studies in media design have sharpened my eye for detail and brought out my visual aspirations. \nI acquired the technical skills for the implementation of web applications in a further training course at the Developer Akademie GmbH. \nWith the combined skills in creativity and technology I am now looking for a team to realize interesting projects together."
+            "description" : "Hi, I'm Ricardo, a frontend developer from Rhineland-Palatinate, Germany. \nMy goal is to realize visually appealing and interactive user interfaces. \nMy studies in media design have sharpened my eye for detail and brought out my visual aspirations. \nI acquired the technical skills for the implementation of web applications in a further training course at the Developer Akademie GmbH. \nWith the combined skills in creativity and technology, I am now looking for a team to realize interesting projects together."
         },
         "skills" : {
-            "description" : "Here is a list of the technologies I have familiarized myself with in my projects."
+            "description" : "Here is a list of the technologies I have familiarized myself within my projects."
         },
         "portfolio" : {
             "description" : "Take a look at my projects and see for yourself."
@@ -27,7 +27,7 @@
             "message-notification" : "Please enter your name.",
             "text" : {
                 "question" : "Do you need support with a project?",
-                "answer" : "Then let's realise your ideas together!",
+                "answer" : "Then let's realize your ideas together!",
                 "call-to-action" : "I look forward to hearing from you."
             },
             "privacy-policy-terms" : {
@@ -45,10 +45,10 @@
     },
     "project" : {
         "join" : {
-            "description" : "A Kanban-based task manager for creating and organising tasks using drag and drop. Tasks can be assigned to users and categories."
+            "description" : "A Kanban-based task manager for creating and organizing tasks using drag and drop. Tasks can be assigned to users and categories."
         },
         "throughTheForest" : {
-            "description" : "A simple jump & run game created with object-orientation. Help the hero overcome the dangers of the magical forest and get home safely."
+            "description" : "A simple jump & run game created with object orientation. Help the hero overcome the dangers of the magical forest and get home safely."
         }
     },
 
@@ -78,9 +78,9 @@
             "li_2" : "Deletion of your data stored by us (Art. 17 GDPR),",
             "li_3" : "Restriction of data processing if we are not yet allowed to delete your data due to legal obligations (Art. 18 GDPR),",
             "li_4" : "Objection to the processing of your data by us (Art. 21 GDPR) and",
-            "li_5" : "Data portability, provided that you have consented to the data processing or have concluded a contract with us (Art. 20 GDPR).",
+            "li_5" : "Data portability provided that you have consented to the data processing or have concluded a contract with us (Art. 20 GDPR).",
             "p_1" : "If you have given us your consent, you can revoke it at any time with effect for the future.",
-            "p_2" : "You can lodge a complaint with a supervisory authority at any time, e.g. with the competent supervisory authority in the federal state of your place of residence or with the authority responsible for us as the responsible entity.",
+            "p_2" : "You can complain to a supervisory authority at any time, e.g. with the competent supervisory authority in the federal state of your place of residence or with the authority responsible for us as the responsible entity.",
             "p_3" : "A list of supervisory authorities (for the non-public sector) with addresses can be found at ",
             "a" : "https://www.bfdi.bund.de/DE/Service/Anschriften/Laender/Laender-node.html"
         },
@@ -93,8 +93,8 @@
                 "li_0" : "Ensuring a smooth connection to the website,",
                 "li_1" : "Ensuring the smooth use of our website,",
                 "li_2" : "Evaluation of system security and stability and",
-                "li_3" : "to optimise our website.",
-                "p_2" : "We do not use your data to draw conclusions about your person. Information of this kind may be statistically evaluated by us in anonymised form in order to optimise our website and the technology behind it."
+                "li_3" : "to optimize our website.",
+                "p_2" : "We do not use your data to draw conclusions about your person. Information of this kind may be statistically evaluated by us in anonymized form in order to optimize our website and the technology behind it."
             },
             "section_1" : {
                 "h3" : "Legal basis and legitimate interest:",
@@ -107,7 +107,7 @@
             "section_3" : {
                 "h3" : "Storage duration:",
                 "p_0" : "The data will be deleted as soon as it is no longer required for the purpose for which it was collected. This is generally the case for the data used to provide the website when the respective session has ended. ",
-                "p_1" : "If the data is stored in log files, this is the case after 14 days at the latest. Storage beyond this period is possible. In this case, the IP addresses of the users are anonymised so that it is no longer possible to identify the calling client."
+                "p_1" : "If the data is stored in log files, this is the case after 14 days at the latest. Storage beyond this period is possible. In this case, the IP addresses of the users are anonymized so that it is no longer possible to identify the calling client."
             },
             "section_4" : {
                 "h3" : "Provision prescribed or required:",
@@ -118,12 +118,12 @@
             "h2" : "Contact form",
             "section_0" : {
                 "h3" : "Type and purpose of processing:",
-                "p" : "The data you enter will be stored for the purpose of personalised communication with you. This requires you to provide a valid e-mail address and your name. This is used to allocate the enquiry and subsequently answer it. The provision of further data is optional."
+                "p" : "The data you enter will be stored for the purpose of personalized communication with you. This requires you to provide a valid e-mail address and your name. This is used to allocate the inquiry and subsequently answer it. The provision of further data is optional."
             },
             "section_1" : {
                 "h3" : "Legal basis:",
                 "p_0" : "The data entered in the contact form is processed on the basis of a legitimate interest (Art. 6 para. 1 lit. f GDPR).",
-                "p_1" : "By providing the contact form, we would like to make it easy for you to contact us. The information you provide will be stored for the purpose of processing your enquiry and for possible follow-up questions.",
+                "p_1" : "By providing the contact form, we would like to make it easy for you to contact us. The information you provide will be stored for the purpose of processing your inquiry and for possible follow-up questions.",
                 "p_2" : "If you contact us to request a quote, the data entered in the contact form will be processed to carry out pre-contractual measures (Art. 6 para. 1 lit. b GDPR)."
             },
             "section_2" : {
@@ -132,12 +132,12 @@
             },
             "section_3" : {
                 "h3" : "Storage duration:",
-                "p_0" : "Data will be deleted no later than 6 months after the enquiry has been processed.",
+                "p_0" : "Data will be deleted no later than 6 months after the inquiry has been processed.",
                 "p_1" : "If there is a contractual relationship, we are subject to the statutory retention periods according to the German Commercial Code (HGB) and delete your data after these periods have expired."
             },
             "section_4" : {
                 "h3" : "Provision prescribed or required:",
-                "p" : "The provision of your personal data is voluntary. However, we can only process your enquiry if you provide us with your name, e-mail address and the reason for the enquiry."
+                "p" : "The provision of your personal data is voluntary. However, we can only process your inquiry if you provide us with your name, e-mail address and the reason for the inquiry."
             }
         },
         "ssl" : {
@@ -148,8 +148,8 @@
             "h2" : "Information about your right to object in accordance with Art. 21 GDPR",
             "section_0" : {
                 "h3" : "Individual right of objection",
-                "p_0" : "You have the right to object, on grounds relating to your particular situation, at any time to processing of personal data concerning you which is based on point (f) of Article 6(1) GDPR (data processing on the basis of a balancing of interests); this also applies to profiling based on this provision within the meaning of Article 4(4) GDPR.",
-                "p_1" : "If you object, we will no longer process your personal data unless we can demonstrate compelling legitimate grounds for the processing which override your interests, rights and freedoms, or the processing serves the establishment, exercise or defence of legal claims."
+                "p_0" : "You have the right to object, on grounds relating to your particular situation, at any time to the processing of personal data concerning you which is based on point (f) of Article 6(1) GDPR (data processing on the basis of a balancing of interests); this also applies to profiling based on this provision within the meaning of Article 4(4) GDPR.",
+                "p_1" : "If you object, we will no longer process your personal data unless we can demonstrate compelling legitimate grounds for the processing that override your interests, rights and freedoms, or the processing serves the establishment, exercise or defense of legal claims."
             },
             "section_1" : {
                 "h3" : "Recipient of an objection"
@@ -161,7 +161,7 @@
         },
         "pp-questions" : {
             "h2" : "Questions for the data protection officer",
-            "p_0" : "If you have any questions about data protection, please send us an e-mail or contact the person responsible for data protection in our organisation directly:",
+            "p_0" : "If you have any questions about data protection, please send us an e-mail or contact the person responsible for data protection in our organization directly:",
             "p_1" : "The privacy policy was created with the help of activeMind AG, the experts for ",
             "a" : "external data protection",
             "p_2" : " (Version #2020-09-30)."

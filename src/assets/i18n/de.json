@@ -10,10 +10,10 @@
         },
         "about-me" : {
             "Hello" : "Hallo",
-            "description" : "Hallo, ich bin Ricardo, ein Frontend-Entwickler aus Rheinland-Pfalz, Deutschland.\nMein Ziel ist es visuell ansprechende und interaktive Benutzeroberflächen umzusetzen.\nMein Studium in Medien Design hat mein Auge für Details geschärft und meinen visuellen Anspruch hervorgebracht. \nDie technischen Fähigkeiten für die Umsetzung von Web Anwendungen habe ich mir in einer Weiterbildung an der Developer Akademie GmbH angeeignet.\nMit den kombinierten Fähigkeiten in Kreativität und Technik bin Ich nun auf der Suche nach einem Team um interessante Projekte gemeinsam umzusetzen."
+            "description" : "Hallo, ich bin Ricardo, ein Frontend-Entwickler aus Rheinland-Pfalz, Deutschland.\nMein Ziel ist es, visuell ansprechende und interaktive Benutzeroberflächen umzusetzen.\nMein Studium in Mediendesign hat mein Auge für Details geschärft und meinen visuellen Anspruch hervorgebracht. \nDie technischen Fähigkeiten für die Umsetzung von Web-Anwendungen habe ich mir in einer Weiterbildung an der Developer Akademie GmbH angeeignet.\nMit den kombinierten Fähigkeiten in Kreativität und Technik bin ich nun auf der Suche nach einem Team, um interessante Projekte gemeinsam umzusetzen."
         },
         "skills" : {
-            "description" : "Hier eine Liste der Technologien mit denen ich mich in meinen Projekten vertraut gemacht habe."
+            "description" : "Hier eine Liste der Technologien, mit denen ich mich in meinen Projekten vertraut gemacht habe."
         },
         "portfolio" : {
             "description" : "Schauen Sie sich meine Projekte an und überzeugen Sie sich selbst."
@@ -48,14 +48,14 @@
             "description" : "Ein Kanban-basierter Aufgabenmanager zum Erstellen und Organisieren von Aufgaben per Drag & Drop. Aufgaben können Benutzern und Kategorien zugewiesen werden."
         },
         "throughTheForest" : {
-            "description" : "Ein einfaches Jump & Run Spiel, das mit Objektorientierung erstellt wurde. Helfen Sie dem Helden die Gefahren des magischen Waldes zu überwinden und sicher nach Hause zu gelangen."
+            "description" : "Ein einfaches Jump & Run Spiel, das mit Objektorientierung erstellt wurde. Helfen Sie dem Helden, die Gefahren des magischen Waldes zu überwinden und sicher nach Hause zu gelangen."
         }
     },
 
     "imprint" : {
         "imprint" : "Impressum",
         "§5TMG" : "Angaben gemäß § 5 TMG:",
-        "profession" : "Frontend Entwickler",
+        "profession" : "Frontend-Entwickler",
         "address" : "Postanschrift",
         "contact" : "Kontakt",
         "phone" : "Telefon",
