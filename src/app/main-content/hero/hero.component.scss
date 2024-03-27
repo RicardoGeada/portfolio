@@ -41,6 +41,7 @@
       $fw: 300,
       $lh: 0.875
     );
+    font-family: "Anton", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     @include dflex($fd: column, $ai: flex-start);
     .gradient {
       background-image: var(--color-gradient);
