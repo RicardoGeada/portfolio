@@ -44,8 +44,11 @@
         }
     },
     "project" : {
-        "ThroughtheForest" : {
-            "description" : "Jump & Run Spiel"
+        "join" : {
+            "description" : "Ein Kanban-basierter Aufgabenmanager zum Erstellen und Organisieren von Aufgaben per Drag & Drop. Aufgaben können Benutzern und Kategorien zugewiesen werden."
+        },
+        "throughTheForest" : {
+            "description" : "Ein einfaches Jump & Run Spiel, das mit Objektorientierung erstellt wurde. Helfen Sie dem Helden die Gefahren des magischen Waldes zu überwinden und sicher nach Hause zu gelangen."
         }
     },
 

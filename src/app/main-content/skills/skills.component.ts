@@ -13,8 +13,8 @@ import { TranslateModule } from '@ngx-translate/core';
 export class SkillsComponent {
   skills: string[] = [
     'Angular',
-    'Typescript',
-    'Javascript',
+    'TypeScript',
+    'JavaScript',
     'HTML',
     'Scrum',
     'Firebase',
