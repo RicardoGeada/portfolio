@@ -21,7 +21,7 @@ export class ProjectsDataService {
       name :  'Through the Forest',
       languages: 'HTML | CSS | JavaScript | OOP',
       description: 'project.throughTheForest.description',
-      link: 'https://throughtheforest.ricardogeada.com',
+      link: 'https://through-the-forest.ricardogeada.com',
       github: 'https://github.com/RicardoGeada/through_the_forest',
       image: 'project-through-the-forest.png'
     }

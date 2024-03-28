@@ -27,7 +27,7 @@ export class ContactComponent {
     message: '',
   };
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
     endPoint: 'https://ricardogeada.com/sendMail.php',
@@ -52,6 +52,8 @@ export class ContactComponent {
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
+            this.submitted = true;
+            setTimeout(() => this.submitted = false, 2500);
           },
           error: (error) => {
             console.error(error);
