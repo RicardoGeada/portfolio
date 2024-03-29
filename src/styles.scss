@@ -54,6 +54,7 @@ body {
 }
 
 .background {
+  background: #0b1215;
   background: url('./assets/img/background-dm.jpg') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -202,6 +203,7 @@ button {
 }
 
 ::-webkit-scrollbar-track {
+  background: #0b1215;
   background: url('./assets/img/background-dm.jpg') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
