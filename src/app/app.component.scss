@@ -17,8 +17,11 @@ router-outlet {
   max-width: 1440px;
 }
 
+
 @media (max-width: 480px) {
   .content {
     gap: 24px;
   }
 }
+
+
