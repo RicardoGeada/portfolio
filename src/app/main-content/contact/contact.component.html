@@ -90,7 +90,7 @@
 
       <!-- submit button -->
       <div class="submit-btn-container">
-        <button class="btn-filled" type="submit" #submitbutton [disabled]="!checked">{{ "section.contact.submit-button" | translate }}</button>
+        <button class="btn-filled" type="submit" #submitbutton [disabled]="!(checked && name.valid && email.valid && message.valid)">{{ "section.contact.submit-button" | translate }}</button>
         <div class="disabled-btn-overlay" (click)="buttonDisabled = true" *ngIf="!checked"></div>
       </div>
         

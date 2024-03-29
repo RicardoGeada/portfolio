@@ -6,6 +6,7 @@
     "Imprint" : "Imprint",
     "section" : {
         "hero" : {
+            "greeting" : "Hi I'm",
             "contact-button" : "GET IN CONTACT"
         },
         "about-me" : {

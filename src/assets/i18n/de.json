@@ -6,6 +6,7 @@
     "Imprint" : "Impressum",
     "section" : {
         "hero" : {
+            "greeting" : "Hallo, ich bin",
             "contact-button" : "KONTAKT"
         },
         "about-me" : {

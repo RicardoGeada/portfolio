@@ -53,6 +53,7 @@ export class ContactComponent {
           next: (response) => {
             ngForm.resetForm();
             this.submitted = true;
+            this.buttonDisabled = false;
             setTimeout(() => this.submitted = false, 2500);
           },
           error: (error) => {
@@ -63,6 +64,7 @@ export class ContactComponent {
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
       this.submitted = true;
+      this.buttonDisabled = false;
       setTimeout(() => this.submitted = false, 2500);
     }
   }
