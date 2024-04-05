@@ -12,7 +12,7 @@ export class LoadingScreenComponent {
 
   constructor() {
     document.addEventListener("DOMContentLoaded", () => {
-      setTimeout(() => this.loaded = true, 200)
+      setTimeout(() => this.loaded = true, 500)
     })
   }
 }
