@@ -35,14 +35,15 @@
   --color-lm-main: white;
 }
 
+// General Styling
 * {
-  // General Styling
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   color: var(--color-text);
   scroll-behavior: smooth;
   scroll-margin-block-start: 86px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 
