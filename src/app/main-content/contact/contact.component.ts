@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, SecurityContext, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { AosDirective } from '../../directives/custom/aos/aos.directive';
 import { TranslateModule } from '@ngx-translate/core';
 import { SubmitNotificationComponent } from './submit-notification/submit-notification.component';
+import DOMPurify  from 'dompurify';
 
 @Component({
   selector: 'app-contact',
@@ -48,7 +49,7 @@ export class ContactComponent {
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http
-        .post(this.post.endPoint, this.post.body(this.contactData))
+        .post(this.post.endPoint, this.post.body(this.sanitizeAndEscapeContactData()))
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
@@ -67,6 +68,33 @@ export class ContactComponent {
       this.buttonDisabled = false;
       setTimeout(() => this.submitted = false, 2500);
     }
+  }
+
+
+  /**
+   * sanitize and escape contactData too prevent XSS
+   * @returns sanitized and escaped contactData
+   */
+  sanitizeAndEscapeContactData() {
+    const sanitizedMessage = DOMPurify.sanitize(this.contactData.message);
+    const escapedMessage = this.escapeHtml(sanitizedMessage!);
+    return {
+      name: this.contactData.name,
+      email: this.contactData.email,
+      message: escapedMessage,
+    }
+  }
+
+
+  /**
+   * escapeHTML
+   * @param text 
+   * @returns 
+   */
+  escapeHtml(text: string): string {
+    const div = document.createElement('div');
+    div.innerText = text;
+    return div.innerHTML;
   }
 
   
