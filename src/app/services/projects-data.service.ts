@@ -10,6 +10,14 @@ export class ProjectsDataService {
 
    readonly projects: Project[] = [
     {
+      name :  'DA Bubble',
+      languages: 'Angular | TypeScript | SCSS | Firebase',
+      description: 'project.da-bubble.description',
+      link: 'https://da-bubble.ricardogeada.com',
+      github: 'https://github.com/RicardoGeada/DABubble',
+      image: 'project-da-bubble.png'
+    },
+    {
       name :  'JOIN',
       languages: 'HTML | CSS | JavaScript',
       description: 'project.join.description',

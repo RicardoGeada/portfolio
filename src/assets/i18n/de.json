@@ -45,6 +45,9 @@
         }
     },
     "project" : {
+        "da-bubble" : {
+            "description" : "Ein Business Chat Client, in Anlehnung an Slack, zur Kommunikation im Team. Erstellen Sie Channels zu bestimmten Themen. Laden Sie Kollegen ein. Und besprechen sie einzelne Punkte in gesonderten Threads."
+        },
         "join" : {
             "description" : "Ein Kanban-basierter Aufgabenmanager zum Erstellen und Organisieren von Aufgaben per Drag & Drop. Aufgaben können Benutzern und Kategorien zugewiesen werden."
         },
