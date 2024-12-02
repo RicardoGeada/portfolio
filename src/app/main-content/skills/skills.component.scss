@@ -3,17 +3,31 @@
 .skills-content {
   @include dflex($fd: column, $g: 16px, $ai: space-between);
 
+  .box {
+    h4 {
+      margin: 0;
+      margin-bottom: 16px;
+    }
+  }
+
   .skills {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, 80px);
     grid-gap: 8px;
     justify-content: space-between;
+    align-items: flex-start;
   }
+
   .skill {
     @include dflex($fd: column);
     width: 80px;
     text-align: center;
+    img {
+      width: 100%;
+      max-width: 80px;
+      max-height: 80px;
+    }
     &:hover {
       font-weight: bold;
       img {

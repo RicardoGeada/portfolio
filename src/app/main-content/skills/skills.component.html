@@ -5,10 +5,29 @@
         <p>{{ "section.skills.description" | translate }}</p>
     </div>
     <!-- skills -->
-    <div class="skills box" [aos]="{class: 'popup', winTrigger: 'bottom'}">
-        <div *ngFor="let skill of skills" class="skill">
-            <img src="./../../assets/img/skill-icons/{{ skill.toLowerCase() }}.svg" alt="{{ skill }}-icon">
-            <div class="skill-name">{{ skill }}</div>
+    <!-- frontend -->
+    <div class="box" [aos]="{class: 'popup', winTrigger: 'bottom'}">
+        <h4>Frontend</h4>
+        <div class="skills">
+            @for(skill of skills.frontend;track skill) {
+                <div class="skill">
+                    <img src="./../../assets/img/skill-icons/frontend/{{ skill.toLowerCase() }}.svg" alt="{{ skill }}-icon">
+                    <div class="skill-name">{{ skill }}</div>
+                </div>
+            }
         </div>
     </div>
+    <!-- backend -->
+    <div class="box" [aos]="{class: 'popup', winTrigger: 'bottom'}">
+        <h4>Backend</h4>
+        <div class="skills">
+            @for(skill of skills.backend;track skill) {
+                <div class="skill">
+                    <img src="./../../assets/img/skill-icons/backend/{{ skill.toLowerCase() }}.svg" alt="{{ skill }}-icon">
+                    <div class="skill-name">{{ skill }}</div>
+                </div>
+            }
+        </div>
+    </div>
+    
 </div>

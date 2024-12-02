@@ -11,16 +11,29 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrls: ['./skills.component.scss', '../../../styles/aos.scss'],
 })
 export class SkillsComponent {
-  skills: string[] = [
-    'Angular',
-    'TypeScript',
-    'JavaScript',
-    'HTML',
-    'Scrum',
-    'Firebase',
-    'Git',
-    'CSS',
-    'Rest-Api',
-    'Material-Design'
-  ];
+  skills: { frontend: string[]; backend: string[] } = {
+    frontend: [
+      'Angular',
+      'TypeScript',
+      'JavaScript',
+      'HTML',
+      'Scrum',
+      'Firebase',
+      'Git',
+      'CSS',
+      'Rest-Api',
+      'Material-Design',
+    ],
+    backend: [
+      'Python',
+      'Django',
+      'Linux',
+      'Redis',
+      'PostgreSQL',
+      'Heroku',
+      'SQL',
+      'Docker',
+      'Cloud',
+    ],
+  };
 }
