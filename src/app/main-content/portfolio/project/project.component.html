@@ -15,7 +15,13 @@
             <div class="project-description"><p>{{ project.description | translate}}</p></div>
             <div class="project-links">
                 <a href="{{project.link}}" target="_blank" class="btn-filled" (click)="$event.stopPropagation()">Live Test</a>
-                <a href="{{project.github}}" target="_blank" class="btn-outlined" (click)="$event.stopPropagation()">Github</a>
+                @if (project.github.frontend) {
+                    <a href="{{project.github.frontend}}" target="_blank" class="btn-outlined" (click)="$event.stopPropagation()">Github {{ project.github.backend ? 'Frontend' : '' }}</a>
+                }
+                @if (project.github.backend) {
+                    <a href="{{project.github.backend}}" target="_blank" class="btn-outlined" (click)="$event.stopPropagation()">Github Backend</a>
+                }
+                
             </div>
         </div>
     </div>

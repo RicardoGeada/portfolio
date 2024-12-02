@@ -20,7 +20,9 @@ export class ProjectComponent {
     languages: '',
     description: '',
     link: '',
-    github: '',
+    github: {
+      frontend: '',
+    },
     image: '',
   };
 }

@@ -10,11 +10,24 @@ export class ProjectsDataService {
 
    readonly projects: Project[] = [
     {
+      name: 'Videoflix',
+      languages: 'Angular | TypeScript | SCSS | Python | Django',
+      description: 'project.videoflix.description',
+      link: 'https://videoflix.ricardogeada.com',
+      github: {
+        frontend: 'https://github.com/RicardoGeada/videoflix-frontend',
+        backend: 'https://github.com/RicardoGeada/videoflix-backend',
+      },
+      image: 'project-videoflix.png',
+    },
+    {
       name :  'DA Bubble',
       languages: 'Angular | TypeScript | SCSS | Firebase',
       description: 'project.da-bubble.description',
       link: 'https://da-bubble.ricardogeada.com',
-      github: 'https://github.com/RicardoGeada/DABubble',
+      github: {
+        frontend:'https://github.com/RicardoGeada/DABubble',
+      },
       image: 'project-da-bubble.png'
     },
     {
@@ -22,7 +35,9 @@ export class ProjectsDataService {
       languages: 'HTML | CSS | JavaScript',
       description: 'project.join.description',
       link: 'https://join.ricardogeada.com',
-      github: 'https://github.com/RicardoGeada/join-group-project',
+      github: {
+        frontend:'https://github.com/RicardoGeada/join-group-project',
+      },
       image: 'project-join.png'
     },
     {
@@ -30,7 +45,9 @@ export class ProjectsDataService {
       languages: 'HTML | CSS | JavaScript | OOP',
       description: 'project.throughTheForest.description',
       link: 'https://through-the-forest.ricardogeada.com',
-      github: 'https://github.com/RicardoGeada/through_the_forest',
+      github: {
+        frontend:'https://github.com/RicardoGeada/through_the_forest',
+      },
       image: 'project-through-the-forest.png'
     }
   ];

@@ -45,6 +45,9 @@
         }
     },
     "project" : {
+        "videoflix" : {
+            "description" : "Videoflix is a video streaming platform that allows users to stream videos after registration, developed as a full-stack solution with Angular and Django."
+        },
         "da-bubble" : {
             "description" : "A business chat client, based on Slack, for team communication. Create channels on specific topics. Invite colleagues. And discuss individual points in separate threads."
         },
