@@ -11,7 +11,7 @@
         },
         "about-me" : {
             "Hello" : "Hello",
-            "description" : "Hi, I'm Ricardo, a frontend developer from Rhineland-Palatinate, Germany. \nMy goal is to realize visually appealing and interactive user interfaces. \nMy studies in media design have sharpened my eye for detail and brought out my visual aspirations. \nI acquired the technical skills for the implementation of web applications in a further training course at the Developer Akademie GmbH. \nWith the combined skills in creativity and technology, I am now looking for a team to realize interesting projects together."
+            "description" : "Hi, I'm Ricardo, a fullstack developer from Rhineland-Palatinate, Germany. \nMy goal is to realize visually appealing and interactive user interfaces. \nMy studies in media design have sharpened my eye for detail and brought out my visual aspirations. \nI acquired the technical skills for the implementation of web applications in a further training course at the Developer Akademie GmbH. \nWith the combined skills in creativity and technology, I am now looking for a team to realize interesting projects together."
         },
         "skills" : {
             "description" : "Here is a list of the technologies I have familiarized myself within my projects."
