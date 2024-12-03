@@ -26,7 +26,15 @@
     width: 30px;
     aspect-ratio: 1 / 1;
   }
+}
 
+
+.language-selection {
+  button {
+    &.active {
+      color: var(--color-dm-primary-default);
+    }
+  }
 }
 
 /* gradient border effect */ 

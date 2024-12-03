@@ -45,9 +45,9 @@
 
             <!-- language-selection -->
             <div class="language-selection">
-                <button (click)="useLanguage('de')">de</button>
+                <button [ngClass]="{'active': activeLanguage == 'de'}" (click)="useLanguage('de')">de</button>
                 |
-                <button (click)="useLanguage('en')">en</button>
+                <button [ngClass]="{'active': activeLanguage == 'en'}" (click)="useLanguage('en')">en</button>
             </div>
 
         </div>
@@ -80,9 +80,9 @@
 
                 <!-- language-selection -->
                 <div class="language-selection">
-                    <button (click)="useLanguage('de')">de</button>
+                    <button [ngClass]="{'active': activeLanguage == 'de'}" (click)="useLanguage('de')">de</button>
                     |
-                    <button (click)="useLanguage('en')">en</button>
+                    <button [ngClass]="{'active': activeLanguage == 'en'}" (click)="useLanguage('en')">en</button>
                 </div>
                 
             </div>
