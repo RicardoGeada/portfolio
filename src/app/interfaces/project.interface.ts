@@ -12,6 +12,9 @@ export interface Project {
     languages : string;
     description: string;
     link: string;
-    github: string;
+    github: {
+        frontend: string,
+        backend?: string,
+    };
     image?: string;
 }

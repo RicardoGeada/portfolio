@@ -160,11 +160,12 @@ button {
   outline: none;
   border: 2px solid transparent;
   background-color: transparent;
-  padding: 16px 40px;
+  padding: 16px 24px;
   border-radius: 40px;
   font-family: "Oswald", Arial, Helvetica, sans-serif;
   font-size: var(--font-size-h6);
   font-weight: 300;
+  text-align: center;
   &-filled {
     @extend .btn;
     color: var(--color-text);

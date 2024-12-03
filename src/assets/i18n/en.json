@@ -11,7 +11,7 @@
         },
         "about-me" : {
             "Hello" : "Hello",
-            "description" : "Hi, I'm Ricardo, a frontend developer from Rhineland-Palatinate, Germany. \nMy goal is to realize visually appealing and interactive user interfaces. \nMy studies in media design have sharpened my eye for detail and brought out my visual aspirations. \nI acquired the technical skills for the implementation of web applications in a further training course at the Developer Akademie GmbH. \nWith the combined skills in creativity and technology, I am now looking for a team to realize interesting projects together."
+            "description" : "Hi, I'm Ricardo, a fullstack developer from Rhineland-Palatinate, Germany. \nMy goal is to realize visually appealing and interactive user interfaces. \nMy studies in media design have sharpened my eye for detail and brought out my visual aspirations. \nI acquired the technical skills for the implementation of web applications in a further training course at the Developer Akademie GmbH. \nWith the combined skills in creativity and technology, I am now looking for a team to realize interesting projects together."
         },
         "skills" : {
             "description" : "Here is a list of the technologies I have familiarized myself within my projects."
@@ -45,6 +45,9 @@
         }
     },
     "project" : {
+        "videoflix" : {
+            "description" : "Videoflix is a video streaming platform that allows users to stream videos after registration, developed as a full-stack solution with Angular and Django."
+        },
         "da-bubble" : {
             "description" : "A business chat client, based on Slack, for team communication. Create channels on specific topics. Invite colleagues. And discuss individual points in separate threads."
         },

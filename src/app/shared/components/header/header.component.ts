@@ -14,6 +14,7 @@ export class HeaderComponent {
   mdq = window.matchMedia('(max-width: 768px)');
   pinned : boolean = false;
   translate : TranslateService;
+  activeLanguage: 'en' | 'de' = 'en';
   
 
   stickyObserver = new IntersectionObserver(
@@ -31,8 +32,9 @@ export class HeaderComponent {
 
 
   /* language switch */
-  useLanguage(language : string) {
+  useLanguage(language : 'en' | 'de') {
     this.translate.use(language);
+    this.activeLanguage = language;
   }
 
 
@@ -55,9 +57,6 @@ export class HeaderComponent {
   checkMatchMedia() {
     this.mdq.addEventListener('change',(event) => {this.mobileMenuOpen = false});
   }
-  
-
-  
   
 
 }
