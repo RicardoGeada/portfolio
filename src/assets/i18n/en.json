@@ -45,6 +45,9 @@
         }
     },
     "project" : {
+        "character-counter" : {
+            "description" : "A real-time text analysis tool that counts characters, words, and sentences, built with React, TypeScript, and SCSS."
+        },
         "videoflix" : {
             "description" : "Videoflix is a video streaming platform that allows users to stream videos after registration, developed as a full-stack solution with Angular and Django."
         },

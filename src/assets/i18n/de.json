@@ -45,6 +45,9 @@
         }
     },
     "project" : {
+        "character-counter" : {
+            "description" : "Ein Tool zur Echtzeit-Textanalyse, das Zeichen, Wörter und Sätze zählt und mit React, TypeScript und SCSS entwickelt wurde."
+        },
         "videoflix" : {
             "description" : "Videoflix ist eine Video-Streaming-Plattform, die Nutzern nach Anmeldung das Streamen von Videos ermöglicht, entwickelt als Fullstack-Lösung mit Angular und Django."
         },

@@ -49,6 +49,16 @@ export class ProjectsDataService {
         frontend:'https://github.com/RicardoGeada/through_the_forest',
       },
       image: 'project-through-the-forest.png'
-    }
+    },
+    {
+      name :  'Character Counter',
+      languages: 'React | Typescript | SCSS',
+      description: 'project.character-counter.description',
+      link: 'https://character-counter.ricardogeada.com',
+      github: {
+        frontend:'https://github.com/RicardoGeada/fm-character-counter',
+      },
+      image: 'project-character-counter.png'
+    },
   ];
 }
